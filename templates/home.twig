@@ -1,0 +1,56 @@
+    {% extends "index" %}
+
+    {% block blogTitleContent %}
+
+        {% set post = craft.entries.section("blogPosts").one() %}
+            
+        {{ post.blogTitle }}
+
+    {% endblock blogTitleContent %}
+    
+    {% block content %}
+
+
+    {% set post = craft.entries.section("blogPosts").one() %}
+
+    <p>
+    {{ post.richText|striptags|slice(0, 1000) }}
+    </p>
+
+    {% endblock %}
+
+    {% block rightContent %}
+
+    {% set pic = craft.entries.section("blogPosts").one() %}
+
+    <img src="{{ pic.featureImage.one().url }}" alt="" width="400">
+    
+    {% endblock %}
+
+    {% block spotlightContent %}
+
+    {% set posts = craft.entries.section("blogPosts").all() %}
+
+    {% for post in posts|slice(0, 3) %}
+        <div class="spotlightPost">
+            <img src="{{ post.featureImage.one().url }}" alt="" width="300">
+            <strong style="color:#C6AFA5;">{{ post.blogTitle }}</strong>
+            <p>{{ post.foodDescription }}</p>
+        </div>
+    {% endfor %}
+
+    {% endblock %}
+
+    {% block secondRowSpotlight %}
+
+    {% set posts = craft.entries.section("blogPosts").all() %}
+
+    {% for post in posts|slice(3, 6) %}
+        <div class="spotlightPost">
+            <img src="{{ post.featureImage.one().url }}" alt="" width="300">
+            <strong style="color:#C6AFA5;">{{ post.blogTitle }}</strong>
+            <p>{{ post.foodDescription }}</p>
+        </div>
+    {% endfor %}
+
+    {% endblock %}  

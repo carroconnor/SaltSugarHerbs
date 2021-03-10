@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ siteName }}</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bentham&family=Sacramento&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ siteUrl }}/assets/style.css">
+</head>
+<body>
+
+    <header class="header">
+        
+        <nav class="nav" id="menu">
+            {% set slug = craft.app.request.getSegment(1)%}
+                            <a href="{{ siteUrl }}" class="logo">
+                    <img src="{{ siteUrl }}assets/Images/sugarGraphic.png" alt="Salt Shaker">
+                </a>
+            {% for link in header.navigation %}
+                {% set destination = link.linkDestination.one() %}
+                {% if loop.index == 3 %}
+                <a href="{{ siteUrl }}" style="text-decoration:none; color: inherit;">
+                    <p class="homePageTitle"> Sugar Salt & Herbs </p>
+                    </a>
+                {% endif %}
+                <a href="{{ destination.url }}" class="nav-link {% if slug == destination.slug %}nav-link--active{% endif %}">{{ link.linkText }}</a>
+            {% endfor %}
+            <a href="{{ siteUrl }}" class="logo">
+                <img src="{{ siteUrl }}assets/Images/saltshaker.png" alt="Salt Shaker">
+            </a>
+        </nav>
+
+    </header>
+    <div class="homeGrid flex">
+        <div class="left-column">
+            <div class="blog-title">
+            {% block blogTitleContent %}
+                {# blog title/date#}
+            {% endblock %}
+            </div>
+            
+            {% block content %}
+                {# Page template inserted here #}
+            {% endblock %}
+            <div class="readMoreButton">
+            <a href="https://www.halfbakedharvest.com/caramel-butter-cake/" class="button">Read More &gt;</a>
+            </div>        
+        </div>
+
+        <div class="right-column">
+            {% block rightContent %}
+                {# Page template inserted here #}
+            {% endblock %}
+        </div>
+    </div>
+
+    <div class="spotlightSection">
+    <h2>
+        <span>
+            <strong class="spotLightText">Spotlight/</strong>
+                <a href="blog" class="newestPostsText">
+                    newest posts</a>
+        </span>
+
+        </br>
+    </h2>
+        <div class="spotlightContent flex">
+        {% block spotlightContent %}
+            {# Recent posts here #}
+        {% endblock %}
+        </div>
+
+        <div class="spotlightContent flex">
+        {% block secondRowSpotlight %}
+            {# Recent posts here #}
+        {% endblock %}
+        </div>
+    <div>
+    <footer class="footer">
+        {{ footer.richText }}
+    </footer>
+
+    <script src="{{ siteUrl }}assets/script.js"></script>
+    
+</body>
+</html>

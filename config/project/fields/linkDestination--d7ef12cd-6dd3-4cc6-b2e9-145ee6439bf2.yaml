@@ -1,0 +1,20 @@
+contentColumnType: string
+fieldGroup: f5300c19-64f0-4ccd-b939-a88bf5724698
+handle: linkDestination
+instructions: ''
+name: 'Link Destination'
+searchable: false
+settings:
+  allowSelfRelations: false
+  limit: '1'
+  localizeRelations: false
+  selectionLabel: 'Add a link destination'
+  showSiteMenu: true
+  source: null
+  sources: '*'
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Entries
