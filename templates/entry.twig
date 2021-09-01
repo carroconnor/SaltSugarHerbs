@@ -9,39 +9,34 @@
     <link rel="stylesheet" href="{{ siteUrl }}/assets/style.css">
 </head>
 <body>
-    {# Classic HTML & CSS page. Can use twig language throughout and reference blocs #}
+
     <header class="header">
-        <div class="headerImage">
-            <img src="{{ siteUrl }}assets/Images/HeaderImage.jpg" alt="Louisville Skyline">
-        </div>
-
-        <nav class="nav">
-            <p class="homePageTitle">Louisville Kentucky - Nulu Condo </p>
-            <div id="rightNav">
-                {% set slug = craft.app.request.getSegment(1)%}
-
-                {% for link in header.navigation.all() %}
-                    {% set destination = link.linkDestination.one() %}
-
-                    <a href="{{ destination.url }}" class="nav-link {% if slug == destination.slug %}nav-link--active{% endif %}">{{ link.linkText }}</a>
-                {% endfor %}
-            </div>
+        
+        <nav class="nav" id="menu">
+            {% set slug = craft.app.request.getSegment(1)%}
+                            <a href="{{ siteUrl }}" class="logo">
+                    <img src="{{ siteUrl }}assets/Images/sugarGraphic.png" alt="Salt Shaker">
+                </a>
+            {% for link in header.navigation %}
+                {% set destination = link.linkDestination.one() %}
+                {% if loop.index == 3 %}
+                <a href="{{ siteUrl }}" style="text-decoration:none; color: inherit;">
+                    <p class="homePageTitle"> Sugar Salt & Herbs </p>
+                    </a>
+                {% endif %}
+                <a href="{{ destination.url }}" class="nav-link {% if slug == destination.slug %}nav-link--active{% endif %}">{{ link.linkText }}</a>
+            {% endfor %}
+            <a href="{{ siteUrl }}" class="logo">
+                <img src="{{ siteUrl }}assets/Images/saltshaker.png" alt="Salt Shaker">
+            </a>
         </nav>
+
     </header>
-    <div class="headerDescription">
-    <p>Short & Long Term Louisville Condo Rental</p>
-    <p>317 S Wenzel St</p>
-    <div class="button">
-        <a href="https://www.airbnb.com/"><p class="buttonText">Book Now</p>
-    </a>
-    </div>
-    </div>
-    
     <div class="homeGrid flex">
         <div class="left-column">
             <div class="blog-title">
             {% block blogTitleContent %}
-                {# blog title/date #}
+                {# blog title/date#}
             {% endblock %}
             </div>
             

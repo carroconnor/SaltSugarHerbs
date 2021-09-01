@@ -5,11 +5,9 @@ body {
     font-size: 16px;
     line-height: 1.4;
     background-image: linear-gradient(#eeeded, white 40%);
-    font-family: 'Bentham', serif;
-    /* background-image: linear-gradien (#f6f5f4, white); */
-
-    /* background: #f6f5f4; */
   }
+
+  a { text-decoration: none !important; }
 
   .topPanel{
     background-color: gray;
@@ -28,37 +26,17 @@ body {
   
   /* Header */
   .header {
-
     justify-content: space-between;
     display: flex;
-    background: linear-gradient(to bottom, rgba(255,255,255,0),
-              rgba(255,255,255,1) 30%), url("https://image.shutterstock.com/image-photo/natural-marble-stone-background-pattern-600w-493373494.jpg");
-    /* background: linear-gradient(
-    to bottom,
-    rgba(0,0,0, 100),
-    rgba(0,0,0, 0)
-    ),url("https://image.shutterstock.com/image-photo/natural-marble-stone-background-pattern-600w-493373494.jpg"); */
-    /* background-color: white; */
-    /* background-image: linear-gradient(url("https://image.shutterstock.com/image-photo/natural-marble-stone-background-pattern-600w-493373494.jpg"), white); */
-    /* background-image: url("https://image.shutterstock.com/image-photo/natural-marble-stone-background-pattern-600w-493373494.jpg"); */
-    /* background: white; */
-    /* background-image: url("https://image.shutterstock.com/image-photo/natural-marble-stone-background-pattern-600w-493373494.jpg"); fallback */
-    /* background-image: url("https://image.shutterstock.com/image-photo/natural-marble-stone-background-pattern-600w-493373494.jpg"), linear-gradient(#eb01a5, #d13531); W3C */
-  }
-  
-  .logo {
-    padding: 12px 30px;
-    height: 100px;
-    transition: background-color .2s ease;
+    position: relative;
   }
 
-  a:hover {
-  color: black;
-}
-  
-  .logo img {
-    top: 1px;
-    height: 100%;
+  .headerImage {
+    width: 100%;
+    height: 100%;            
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 
   h2 strong {
@@ -66,59 +44,88 @@ body {
     letter-spacing: .2rem;
     text-transform: uppercase;
 }
-  
-  .logo:hover {
-    background-color: rgba(255,255,255,0.15);
-  }
-  
+
   /* Navigation */
   .nav {
     padding: 0 10px;
-    align-items: center;
     display: flex;
     margin: 0 auto;
+    width: 100%;
+    position: fixed;
+    z-index:9999999;
+    /* background: white; FF3.6+ */
+    /* border:2px solid #fff; */
+      /* box-shadow: 10px 10px 5px #ccc;
+      -moz-box-shadow: 10px 10px 5px #ccc;
+      -webkit-box-shadow: 0px 3px 5px #ccc;
+      -khtml-box-shadow: 10px 10px 5px #ccc; */
+  }
+
+  .headerDescription {
+    position: absolute;
+    left: 1rem;
+    top: 11rem;
+    color: white;
+  }
+
+  .button {
+    background-color: #E61E4D;
+    border-radius: 10px;
+    text-align: center;
+    width: 180px;
+    height: 3.8rem;
+    border: 0 none;
+    z-index:9999998;
+  }
+
+  .buttonText {
+    position: relative;
+    padding-top: 1.2rem;
+    letter-spacing: .2rem;
+    color: white !important;
   }
 
   .homePageTitle{
-    font-family: 'Sacramento', cursive;
+    font-family: sans-serif;
+    font-weight: 400;
     font-size: xx-large;
     text-align: center;
+    color: white;
   }
   
   .nav-link {
     padding: 0 20px;
-    height: 100%;
     text-decoration: none;
-    color: #797771;
-    align-items: center;
+    color: white;
     display: flex;
     transition: background-color .2s ease;
-    font-family: 'Bentham', serif;  }
+    font-family: sans-serif;
+    font-weight: 400;
+  }
+
+  #rightNav {
+    display: flex;
+    position: absolute;
+    right: 0px;
+    padding: 35px 10px 0px 0px;
+  }
 
   .spotLightText {
     color: #797771;
     font-size: medium;
   }
 
+  .newestPostLink {
+    color: #797771;
+  }
+
   .newestPostsText {
     color: #C6AFA5;
     font-size: 40px;
   }
-
-  #menu {
-    border-top: 1px solid #DDDDDC;
-    border-bottom: 1px solid #DDDDDC;
-    margin: 50px auto 100px;
-    position: relative;
-    z-index: 1;
-}
-  
-  .nav-link:not(.nav-link--active):hover {
-    background-color: rgba(255,255,255,0.15);
-  }
   
   .nav-link--active {
-    background-color: #e5422b;
+    color: black;
   }
   
   /* Content */
@@ -135,7 +142,7 @@ body {
     padding: 20px 0px 0px 0px;
   }
 
-  .button {
+  /* .button {
     width: auto;
     height: 4.4rem;
     border: 0 none;
@@ -143,25 +150,24 @@ body {
     padding: 1rem 2.6rem;
     background-color: #C6AFA5;
     /* font: 700 1.6rem/2.4rem 'Proxima Nova',sans-serif; */
-    color: #fff;
+    /* color: #fff;
     letter-spacing: .2rem;
     text-align: center;
     text-transform: uppercase;
     text-decoration: none;
-  }
+  } */ 
 
   .blog-title{
     color: #C6AFA5;
   }
 
   .homeGrid {
+    padding-top: 700px; /* added after new start */
     width: 100%;
     justify-content: center;
   }
 
   .right-column {
-    /* margin: 0px auto 60px 0px; */
-    /* padding: 0px 60px 35px 0px; */
     padding: 20px;
     background-color: white;
   }
@@ -184,12 +190,10 @@ body {
   }
 
   .left-column {
-    /* margin: 0px 0px 30px auto; */
-    /* padding: 0px 20px 30px 60px; */
     padding: 20px;
     max-width: 460px;
     background-color: white;
-    font-family: 'Bentham', serif;
+    font-family: sans-serif;
   }
   
   /* Typography & Images */

@@ -4,6 +4,37 @@ fieldLayouts:
       -
         elements:
           -
+            fieldUid: 415c6f62-6847-4640-90fe-f06351803e4c
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: 'Right Content'
+        sortOrder: 1
+      -
+        elements:
+          -
+            fieldUid: 6f495b03-3811-45a4-ab47-75616a309cab
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 55132d40-d27f-4468-bb43-1557d3a310da
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
             autocapitalize: true
             autocomplete: false
             autocorrect: true
@@ -26,38 +57,7 @@ fieldLayouts:
             type: craft\fieldlayoutelements\EntryTitleField
             warning: null
             width: 100
-          -
-            fieldUid: 6f495b03-3811-45a4-ab47-75616a309cab
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-          -
-            fieldUid: 55132d40-d27f-4468-bb43-1557d3a310da
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
         name: Content
-        sortOrder: 1
-      -
-        elements:
-          -
-            fieldUid: 415c6f62-6847-4640-90fe-f06351803e4c
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-        name: 'Right Content'
         sortOrder: 2
 handle: home
 hasTitleField: false

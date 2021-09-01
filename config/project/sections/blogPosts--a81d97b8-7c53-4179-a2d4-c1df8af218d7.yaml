@@ -3,7 +3,7 @@ handle: blogPosts
 name: 'Blog Posts'
 propagationMethod: all
 siteSettings:
-  bc7b7788-4348-4a7e-9a1d-015a3d266633:
+  bc7b7788-4348-4a7e-9a1d-015a3d266633: # Louisville Condo
     enabledByDefault: true
     hasUrls: true
     template: blog/_entry

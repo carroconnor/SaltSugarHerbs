@@ -1,3 +1,4 @@
+    {# References the index page. This grabs data from craft to be used in index page #}
     {% extends "index" %}
 
     {% block blogTitleContent %}
@@ -17,13 +18,19 @@
     {{ post.richText|striptags|slice(0, 1000) }}
     </p>
 
+    <div class="readMoreButton">
+            <a href="{{ post.url }}" class="button">Read More &gt;</a>
+    </div> 
+
     {% endblock %}
 
     {% block rightContent %}
 
     {% set pic = craft.entries.section("blogPosts").one() %}
 
-    <img src="{{ pic.featureImage.one().url }}" alt="" width="400">
+    {% set post = craft.entries.section("blogPosts").one() %}
+
+    <a href="{{ post.url }}"><img src="{{ pic.featureImage.one().url }}" alt="" width="400"></a>
     
     {% endblock %}
 
@@ -33,7 +40,7 @@
 
     {% for post in posts|slice(0, 3) %}
         <div class="spotlightPost">
-            <img src="{{ post.featureImage.one().url }}" alt="" width="300">
+            <a href="{{ post.url }}"><img src="{{ post.featureImage.one().url }}" alt="" width="300"></a>
             <strong style="color:#C6AFA5;">{{ post.blogTitle }}</strong>
             <p>{{ post.foodDescription }}</p>
         </div>
@@ -47,7 +54,7 @@
 
     {% for post in posts|slice(3, 6) %}
         <div class="spotlightPost">
-            <img src="{{ post.featureImage.one().url }}" alt="" width="300">
+            <a href="{{ post.url }}"><img src="{{ post.featureImage.one().url }}" alt="" width="300"></a>
             <strong style="color:#C6AFA5;">{{ post.blogTitle }}</strong>
             <p>{{ post.foodDescription }}</p>
         </div>

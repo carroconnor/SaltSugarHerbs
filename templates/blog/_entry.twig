@@ -1,8 +1,25 @@
-{% extends "index" %}
+{% extends "entry" %}
 
 {% block content %}
 
     <h1>{{ entry.title }}</h1>
+
+    {{ entry.richText }}
+
+    <div>
+    {% for block in entry.recipeContent.all() %}
+      <div>
+        {% if block.type == 'text' %}
+          {{ block.text }}
+        {% elseif block.type == 'image' %}
+          {% for image in block.image.all() %}
+            <img src="{{ image.url }}" alt="{{ image.title }}" />
+          {% endfor %}
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+
 
     {{ entry.richText }}
 

@@ -13,24 +13,6 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 6f495b03-3811-45a4-ab47-75616a309cab
-            instructions: ''
-            label: 'Blog Main Text'
-            required: '1'
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-          -
-            fieldUid: a8fb0957-9159-4fda-8809-4ebd81c4622b
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-          -
             autocapitalize: true
             autocomplete: false
             autocorrect: true
@@ -53,6 +35,24 @@ fieldLayouts:
             type: craft\fieldlayoutelements\EntryTitleField
             warning: null
             width: 100
+          -
+            fieldUid: 6f495b03-3811-45a4-ab47-75616a309cab
+            instructions: ''
+            label: 'Blog Main Text'
+            required: '1'
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: a8fb0957-9159-4fda-8809-4ebd81c4622b
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
         name: 'Left Side Blog Post'
         sortOrder: 1
       -
@@ -68,6 +68,19 @@ fieldLayouts:
             width: 100
         name: 'Right Side Blog Post'
         sortOrder: 2
+      -
+        elements:
+          -
+            fieldUid: 9569ff25-4eea-47a1-8f8e-6828af1e2686
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: PostContent
+        sortOrder: 3
 handle: blogPosts
 hasTitleField: true
 name: 'Blog Posts'

@@ -1,18 +1,30 @@
-dateModified: 1615173197
+dateModified: 1630175151
 email:
   fromEmail: carr.oconnor@gmail.com
-  fromName: 'Test Site'
+  fromName: 'Louisville Condo'
+  replyToEmail: null
+  template: ''
+  transportSettings:
+    command: ''
   transportType: craft\mail\transportadapters\Sendmail
+meta:
+  __names__:
+    0b25658b-1866-48e6-9b31-23f3e2280c39: Header # Header
+    107f4ccc-bdd5-4d1c-af75-50ff56ba625b: Uploads # Uploads
+    983d981c-8052-49a0-bd18-9d0cd36b1677: 'Public Schema' # Public Schema
+    bc7b7788-4348-4a7e-9a1d-015a3d266633: 'Louisville Condo' # Louisville Condo
+    c2edb73b-ea93-43ba-be28-0a2d7ffac6b1: Footer # Footer
 plugins:
   redactor:
     edition: standard
     enabled: true
     schemaVersion: 2.3.0
 system:
-  edition: solo
+  edition: pro
   live: true
-  name: 'Test Site'
-  schemaVersion: 3.5.13
+  name: 'Louisville Condo'
+  retryDuration: null
+  schemaVersion: 3.7.7
   timeZone: America/Los_Angeles
 users:
   allowPublicRegistration: false

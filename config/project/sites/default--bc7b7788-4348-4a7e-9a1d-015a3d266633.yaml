@@ -1,8 +1,9 @@
 baseUrl: $PRIMARY_SITE_URL
+enabled: true
 handle: default
 hasUrls: true
 language: en-US
-name: 'Test Site'
+name: 'Louisville Condo'
 primary: true
 siteGroup: 2d123a88-5d98-4160-9532-3d242c18a0de
 sortOrder: 1

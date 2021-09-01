@@ -9,7 +9,7 @@ settings:
   allowUploads: true
   allowedKinds:
     - image
-  defaultUploadLocationSource: 'volume:107f4ccc-bdd5-4d1c-af75-50ff56ba625b'
+  defaultUploadLocationSource: 'volume:107f4ccc-bdd5-4d1c-af75-50ff56ba625b' # Uploads
   defaultUploadLocationSubpath: ''
   limit: '1'
   localizeRelations: false
@@ -19,7 +19,7 @@ settings:
   showSiteMenu: true
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
-  singleUploadLocationSource: 'volume:107f4ccc-bdd5-4d1c-af75-50ff56ba625b'
+  singleUploadLocationSource: 'volume:107f4ccc-bdd5-4d1c-af75-50ff56ba625b' # Uploads
   singleUploadLocationSubpath: ''
   source: null
   sources: '*'

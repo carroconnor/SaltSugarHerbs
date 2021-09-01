@@ -33,8 +33,10 @@ return [
 
         // Prevent crawlers from indexing pages and following links
         'disallowRobots' => true,
+        // existing settings ...
+        'backupCommand' => getenv('BACKUP_COMMAND'),
+        'restoreCommand' => getenv('RESTORE_COMMAND'),
     ],
-
     // Staging environment settings
     'staging' => [
         // Set this to `false` to prevent administrative changes from being made on Staging
