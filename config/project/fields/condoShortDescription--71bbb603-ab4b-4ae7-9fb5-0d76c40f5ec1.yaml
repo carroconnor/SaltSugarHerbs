@@ -1,0 +1,28 @@
+columnSuffix: vyvrwnff
+contentColumnType: text
+fieldGroup: f5300c19-64f0-4ccd-b939-a88bf5724698
+handle: condoShortDescription
+instructions: 'Description for main landing header image above the ''Book Now'' button.'
+name: 'Condo Short Description'
+searchable: false
+settings:
+  availableTransforms: '*'
+  availableVolumes: '*'
+  cleanupHtml: true
+  columnType: text
+  configSelectionMode: choose
+  defaultTransform: ''
+  manualConfig: ''
+  purifierConfig: ''
+  purifyHtml: '1'
+  redactorConfig: ''
+  removeEmptyTags: '1'
+  removeInlineStyles: '1'
+  removeNbsp: '1'
+  showHtmlButtonForNonAdmins: '1'
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  uiMode: enlarged
+translationKeyFormat: null
+translationMethod: none
+type: craft\redactor\Field

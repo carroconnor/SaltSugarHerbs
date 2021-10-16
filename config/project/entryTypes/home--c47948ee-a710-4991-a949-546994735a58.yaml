@@ -59,6 +59,46 @@ fieldLayouts:
             width: 100
         name: Content
         sortOrder: 2
+      -
+        elements:
+          -
+            fieldUid: 4bb733b4-211f-47a9-bc42-258bf24d0f89 # Condo Title 
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 30df8ec6-9014-4d28-8f15-ba9a922dce29 # Landing Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 71bbb603-ab4b-4ae7-9fb5-0d76c40f5ec1 # Condo Short Description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 91ede8c9-d8c0-455b-a302-adcfb2121874 # Address Label
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: 'Landing Header Content'
+        sortOrder: 3
 handle: home
 hasTitleField: false
 name: Home

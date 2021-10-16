@@ -1,6 +1,24 @@
     {# References the index page. This grabs data from craft to be used in index page #}
     {% extends "index" %}
 
+    {% block titleSection %}
+
+        {% set home = craft.entries.section("home").one() %}
+
+        {{ home.condoTitle }}
+
+    {% endblock titleSection %}
+
+    {% block headerLandingContent %}
+
+        {% set home = craft.entries.section("home").one() %}
+
+        {{ home.condoShortDescription }}
+
+        {{ home.addressLabel }}
+
+    {% endblock headerLandingContent %}
+
     {% block blogTitleContent %}
 
         {% set post = craft.entries.section("blogPosts").one() %}

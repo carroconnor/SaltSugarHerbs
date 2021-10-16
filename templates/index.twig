@@ -16,10 +16,12 @@
         </div>
 
         <nav class="nav">
-            <p class="homePageTitle">Louisville Kentucky - Nulu Condo </p>
+            <div class="homePageTitle"> 
+                {% block titleSection %}
+                {% endblock %}
+            </div>
             <div id="rightNav">
                 {% set slug = craft.app.request.getSegment(1)%}
-
                 {% for link in header.navigation.all() %}
                     {% set destination = link.linkDestination.one() %}
 
@@ -27,15 +29,19 @@
                 {% endfor %}
             </div>
         </nav>
+        <div class="headerDescription">
+                {% block headerLandingContent %}
+                {% endblock %}
+        <div class="button">
+        {# redo buttons #}
+            <a href="https://www.airbnb.com/"><p class="buttonText">Book Now</p>
+        </a>
+        </div>
+    </div>
     </header>
-    <div class="headerDescription">
-    <p>Short & Long Term Louisville Condo Rental</p>
-    <p>317 S Wenzel St</p>
-    <div class="button">
-        <a href="https://www.airbnb.com/"><p class="buttonText">Book Now</p>
-    </a>
-    </div>
-    </div>
+    {# Templates Inserted here #}
+
+    <p>Where does this go?</p>
     
     <div class="homeGrid flex">
         <div class="left-column">
