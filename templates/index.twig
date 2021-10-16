@@ -40,55 +40,44 @@
     </div>
     </header>
     {# Templates Inserted here #}
+    {# Condo Description under landing header#}
+    <div>
+        <div class="descriptionUnderHeader">
+            <p>3RD FLOOR CONDO #312</p>
+            <p>BEACH FRONT, PORT ARANSAS CONDO RENTAL</p>
+            <p>720 ACCESS ROAD 1-A PORT ARANSAS, TX 78373</p>
+        </div>
 
-    <p>Where does this go?</p>
-    
-    <div class="homeGrid flex">
-        <div class="left-column">
-            <div class="blog-title">
-            {% block blogTitleContent %}
-                {# blog title/date #}
-            {% endblock %}
+        <div class="grid2x2">
+            <div class="card">
+                <p>icon</p>
+                <p>8 Guests</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             </div>
-            
-            {% block content %}
-                {# Page template inserted here #}
-            {% endblock %}
-                   
-        </div>
 
-        <div class="right-column">
-            {% block rightContent %}
-                {# Page template inserted here #}
-            {% endblock %}
-        </div>
+            <div class="card">
+                <p>icon</p>
+                <p>8 Guests</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+
+            <div class="card">
+                <p>icon</p>
+                <p>8 Guests</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+
+            <div class="card">
+                <p>icon</p>
+                <p>8 Guests</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+        </div>  
     </div>
 
-    <div class="spotlightSection">
-    <h2>
-        <span>
-            <strong class="spotLightText">Spotlight/</strong>
-                <a href="blog" class="newestPostsText">
-                    newest posts</a>
-        </span>
-
-        </br>
-    </h2>
-        <div class="spotlightContent flex">
-        {% block spotlightContent %}
-            {# Recent posts here #}
-        {% endblock %}
-        </div>
-
-        <div class="spotlightContent flex">
-        {% block secondRowSpotlight %}
-            {# Recent posts here #}
-        {% endblock %}
-        </div>
-    <div>
-    <footer class="footer">
+    {# <footer class="footer">
         {{ footer.richText }}
-    </footer>
+    </footer> #}
 
     <script src="{{ siteUrl }}assets/script.js"></script>
     
