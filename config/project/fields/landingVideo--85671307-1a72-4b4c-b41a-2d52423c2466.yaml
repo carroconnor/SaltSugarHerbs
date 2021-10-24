@@ -1,8 +1,9 @@
+columnSuffix: nqdouwif
 contentColumnType: text
 fieldGroup: f5300c19-64f0-4ccd-b939-a88bf5724698
-handle: foodDescription
-instructions: "Single sentence describing what your are cooking ex: \"Soft and Crinkly Brown Sugar Peanut Butter Cookies\"\r\n"
-name: 'Food Description'
+handle: landingVideo
+instructions: 'Showcase video upload link'
+name: 'Landing Video'
 searchable: false
 settings:
   availableTransforms: '*'
@@ -18,7 +19,7 @@ settings:
   removeEmptyTags: '1'
   removeInlineStyles: '1'
   removeNbsp: '1'
-  showHtmlButtonForNonAdmins: ''
+  showHtmlButtonForNonAdmins: '1'
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
   uiMode: enlarged

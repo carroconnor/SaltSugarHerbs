@@ -4,37 +4,6 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: 415c6f62-6847-4640-90fe-f06351803e4c
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-        name: 'Right Content'
-        sortOrder: 1
-      -
-        elements:
-          -
-            fieldUid: 6f495b03-3811-45a4-ab47-75616a309cab
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-          -
-            fieldUid: 55132d40-d27f-4468-bb43-1557d3a310da
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-          -
             autocapitalize: true
             autocomplete: false
             autocorrect: true
@@ -57,10 +26,6 @@ fieldLayouts:
             type: craft\fieldlayoutelements\EntryTitleField
             warning: null
             width: 100
-        name: Content
-        sortOrder: 2
-      -
-        elements:
           -
             fieldUid: 4bb733b4-211f-47a9-bc42-258bf24d0f89 # Condo Title 
             instructions: null
@@ -97,8 +62,17 @@ fieldLayouts:
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
+          -
+            fieldUid: 85671307-1a72-4b4c-b41a-2d52423c2466 # Landing Video
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
         name: 'Landing Header Content'
-        sortOrder: 3
+        sortOrder: 1
 handle: home
 hasTitleField: false
 name: Home

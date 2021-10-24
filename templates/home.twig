@@ -19,6 +19,14 @@
 
     {% endblock headerLandingContent %}
 
+    {% block landingVideo %}
+
+        {% set home = craft.entries.section("home").one() %}
+
+        {{ home.landingVideo }}
+        
+    {% endblock landingVideo %}
+
     {% block blogTitleContent %}
 
         {% set post = craft.entries.section("blogPosts").one() %}

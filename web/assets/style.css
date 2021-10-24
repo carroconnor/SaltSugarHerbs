@@ -7,17 +7,12 @@ body {
     /* background-image: linear-gradient(#eeeded, white 40%); */
   }
 
-  a { text-decoration: none !important; }
-
-  .topPanel{
-    background-color: gray;
-    text-align: center;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    width: 100%; 
-    width: 100vw;
+  .mainContent {
+    position: relative;
+    height: 1000px;
   }
 
+  a { text-decoration: none !important; }
   
   div, span, section, header, nav, footer, figure, p, h1, h2, h3, h4, h5, h6, img {
     position: relative;
@@ -47,7 +42,7 @@ body {
 
   /* Navigation */
   .nav {
-    padding: 0 10px;
+    padding: 0 5%;
     display: flex;
     margin: 0 auto;
     width: 100%;
@@ -66,6 +61,7 @@ body {
     left: 1rem;
     top: 11rem;
     color: white;
+    padding-left: 5%;
   }
 
   .button {
@@ -78,11 +74,9 @@ body {
     z-index:9999998;
   }
 
-  .buttonText {
-    position: relative;
-    padding-top: 1.2rem;
-    letter-spacing: .2rem;
-    color: white !important;
+  .iconStyle {
+    color: #E61E4D;
+    font-size: 30px;
   }
 
   .homePageTitle{
@@ -109,20 +103,6 @@ body {
     right: 0px;
     padding: 35px 10px 0px 0px;
   }
-
-  .spotLightText {
-    color: #797771;
-    font-size: medium;
-  }
-
-  .newestPostLink {
-    color: #797771;
-  }
-
-  .newestPostsText {
-    color: #C6AFA5;
-    font-size: 40px;
-  }
   
   .nav-link--active {
     color: black;
@@ -138,10 +118,6 @@ body {
     align-self: center;
   }
 
-  .readMoreButton{
-    padding: 20px 0px 0px 0px;
-  }
-
   .descriptionUnderHeader{
     display: block;
     top: 55em;
@@ -149,11 +125,18 @@ body {
     text-align: center;
   }
 
+  .videoSection {
+    position: relative;
+    left: 50%;
+    top: 20em;
+  }
+
   .grid2x2 {
     min-height: 100%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    padding-left: 5%;
     width: 50%;
     top: 50em;
   }
@@ -168,60 +151,6 @@ body {
     justify-content: center;
     flex-direction: row;
   }
-
-  /* .button {
-    width: auto;
-    height: 4.4rem;
-    border: 0 none;
-    margin: 0 auto;
-    padding: 1rem 2.6rem;
-    background-color: #C6AFA5;
-    /* font: 700 1.6rem/2.4rem 'Proxima Nova',sans-serif; */
-    /* color: #fff;
-    letter-spacing: .2rem;
-    text-align: center;
-    text-transform: uppercase;
-    text-decoration: none;
-  } */ 
-
-  .blog-title{
-    color: #C6AFA5;
-  }
-
-  .homeGrid {
-    padding-top: 700px; /* added after new start */
-    width: 100%;
-    justify-content: center;
-  }
-
-  .right-column {
-    padding: 20px;
-    background-color: white;
-  }
-
-  .spotlightSection {
-    margin: 0px 20px 0px 20px;
-  }
-
-  .spotlightContent {
-    width: 100%;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .spotlightPost {
-    max-width: 300px;
-    padding: 0px 15px 0px 15px;
-    flex-grow: 1;
-    flex: 33%;
-  }
-
-  .left-column {
-    padding: 20px;
-    max-width: 460px;
-    background-color: white;
-    font-family: sans-serif;
-  }
   
   /* Typography & Images */
   p {
@@ -230,13 +159,6 @@ body {
   
   img {
     max-width: 100%;
-  }
-  
-  .feature-img {
-    margin: 20px 0 10px;
-    width: 100%;
-    border-radius: 6px;
-    box-shadow: 0 3px 10px -2px rgba(0,0,0,0.3);
   }
   
   /* Footer */
@@ -251,3 +173,75 @@ body {
   .footer p {
     margin: 0;
   }
+
+  /* Material Button Design */
+
+  .btn {
+    position: relative;
+  
+    display: block;
+    padding: 0;
+
+    overflow: hidden;
+  
+    border-width: 0;
+    outline: none;
+    border-radius: 10px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+    
+    background-color: #E61E4D;
+    color: #ecf0f1;
+    
+    z-index:9999998;
+    transition: background-color .3s;
+  }
+  
+  .btn:hover, .btn:focus {
+    background-color: rgb(248, 2, 60);
+  }
+  
+  .btn > * {
+    position: relative;
+  }
+  
+  .btn span {
+    display: block;
+    padding: 12px 24px;
+  }
+  
+  .btn:before {
+    content: "";
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    
+    display: block;
+    width: 0;
+    padding-top: 0;
+      
+    border-radius: 100%;
+    
+    background-color: rgba(236, 240, 241, .3);
+    
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+  
+  .btn:active:before {
+    width: 120%;
+    padding-top: 120%;
+    
+    transition: width .2s ease-out, padding-top .2s ease-out;
+  }
+
+  .buttonText {
+    padding: 0px 30px 0px 30px;
+    letter-spacing: .2rem;
+    color: white !important;
+    font-size: 16px;
+  }
+  

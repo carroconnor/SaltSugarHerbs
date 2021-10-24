@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Bentham&family=Sacramento&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ siteUrl }}/assets/style.css">
+    <script src="https://kit.fontawesome.com/10519c6a79.js" crossorigin="anonymous"></script>
 </head>
 <body>
     {# Classic HTML & CSS page. Can use twig language throughout and reference blocs #}
@@ -32,16 +33,12 @@
         <div class="headerDescription">
                 {% block headerLandingContent %}
                 {% endblock %}
-        <div class="button">
-        {# redo buttons #}
-            <a href="https://www.airbnb.com/"><p class="buttonText">Book Now</p>
-        </a>
+        <button class="btn" type="button" onclick="location.href='https://airbnb.com';"><p class="buttonText">Book Now</p></button>
         </div>
-    </div>
     </header>
     {# Templates Inserted here #}
     {# Condo Description under landing header#}
-    <div>
+    <div class="mainContent">
         <div class="descriptionUnderHeader">
             <p>3RD FLOOR CONDO #312</p>
             <p>BEACH FRONT, PORT ARANSAS CONDO RENTAL</p>
@@ -50,29 +47,47 @@
 
         <div class="grid2x2">
             <div class="card">
-                <p>icon</p>
-                <p>8 Guests</p>
+                <span class="iconStyle">
+                    <i class="fas fa-users"></i>
+                </span>
+                </br>
+                <strong>8 Guests</strong>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             </div>
 
             <div class="card">
-                <p>icon</p>
-                <p>8 Guests</p>
+                <span class="iconStyle">                
+                    <i class="fas fa-home"></i>
+                </span>
+                </br>
+                <strong>Kitchen</strong>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             </div>
 
             <div class="card">
-                <p>icon</p>
-                <p>8 Guests</p>
+                <span class="iconStyle">
+                    <i class="fas fa-sun"></i>
+                </span>
+                </br>
+                <strong>Patio Area</strong>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             </div>
 
             <div class="card">
-                <p>icon</p>
-                <p>8 Guests</p>
+                <span class="iconStyle"> 
+                    <i class="fas fa-utensils"></i>
+                </span>
+                </br>
+                <strong>Dining</strong>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             </div>
-        </div>  
+        </div> 
+
+        <div class="videoSection">
+        <iframe width="600" height="450" src="https://www.youtube.com/embed/lCpySDmGVEE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                {# {% block landingVideo %}
+                {% endblock %} #}
+        </div> 
     </div>
 
     {# <footer class="footer">

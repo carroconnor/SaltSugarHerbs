@@ -1,4 +1,4 @@
-dateModified: 1634357712
+dateModified: 1635044846
 email:
   fromEmail: carr.oconnor@gmail.com
   fromName: 'Louisville Condo'
@@ -10,20 +10,27 @@ email:
 meta:
   __names__:
     0b25658b-1866-48e6-9b31-23f3e2280c39: Header # Header
+    4a93e8a5-0a43-4d07-bdc3-0f20f4a84f08: Text # Text
     4bb733b4-211f-47a9-bc42-258bf24d0f89: 'Condo Title ' # Condo Title 
     30df8ec6-9014-4d28-8f15-ba9a922dce29: 'Landing Image' # Landing Image
     71bbb603-ab4b-4ae7-9fb5-0d76c40f5ec1: 'Condo Short Description' # Condo Short Description
     91ede8c9-d8c0-455b-a302-adcfb2121874: 'Address Label' # Address Label
     107f4ccc-bdd5-4d1c-af75-50ff56ba625b: Uploads # Uploads
     983d981c-8052-49a0-bd18-9d0cd36b1677: 'Public Schema' # Public Schema
+    85671307-1a72-4b4c-b41a-2d52423c2466: 'Landing Video' # Landing Video
     bc7b7788-4348-4a7e-9a1d-015a3d266633: 'Louisville Condo' # Louisville Condo
     c2edb73b-ea93-43ba-be28-0a2d7ffac6b1: Footer # Footer
     c47948ee-a710-4991-a949-546994735a58: Home # Home
+    e0356e54-854a-44a2-bf30-d368c7965eb6: Image # Image
 plugins:
   redactor:
     edition: standard
     enabled: true
     schemaVersion: 2.3.0
+  redactor-font-awesome:
+    edition: standard
+    enabled: true
+    schemaVersion: '2.0'
 system:
   edition: pro
   live: true
