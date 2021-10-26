@@ -12,10 +12,6 @@
 <body>
     {# Classic HTML & CSS page. Can use twig language throughout and reference blocs #}
     <header class="header">
-        <div class="headerImage">
-            <img src="{{ siteUrl }}assets/Images/HeaderImage.jpg" alt="Louisville Skyline">
-        </div>
-
         <nav class="nav">
             <div class="homePageTitle"> 
                 {% block titleSection %}
@@ -30,15 +26,18 @@
                 {% endfor %}
             </div>
         </nav>
-        <div class="headerDescription">
-                {% block headerLandingContent %}
-                {% endblock %}
-        <button class="btn" type="button" onclick="location.href='https://airbnb.com';"><p class="buttonText">Book Now</p></button>
-        </div>
     </header>
     {# Templates Inserted here #}
     {# Condo Description under landing header#}
     <div class="mainContent">
+        <div class="headerImage">
+            <img src="{{ siteUrl }}assets/Images/HeaderImage.jpg" alt="Louisville Skyline">
+            <div class="headerDescription">
+                {% block headerLandingContent %}
+                {% endblock %}
+            <button class="btn" type="button" onclick="location.href='https://airbnb.com';"><p class="buttonText">Book Now</p></button>
+            </div>
+        </div>
         <div class="descriptionUnderHeader">
             <p>3RD FLOOR CONDO #312</p>
             <p>BEACH FRONT, PORT ARANSAS CONDO RENTAL</p>
@@ -84,10 +83,11 @@
         </div> 
 
         <div class="videoSection">
-        <iframe width="600" height="450" src="https://www.youtube.com/embed/lCpySDmGVEE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                {# {% block landingVideo %}
-                {% endblock %} #}
+            <iframe width="500" height="450" src="https://www.youtube.com/embed/lCpySDmGVEE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            {# {% block landingVideo %}
+            {% endblock %} #}
         </div> 
+
     </div>
 
     {# <footer class="footer">
