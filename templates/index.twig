@@ -8,21 +8,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Bentham&family=Sacramento&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ siteUrl }}/assets/style.css">
     <script src="https://kit.fontawesome.com/10519c6a79.js" crossorigin="anonymous"></script>
+    <script src="{{ siteUrl }}/assets/script.js"></script>
+
 </head>
 <body>
     {# Classic HTML & CSS page. Can use twig language throughout and reference blocs #}
     <header class="header">
-        <nav class="nav">
-            <div class="homePageTitle"> 
+        <nav class="nav" id="navId">
+            <div class="homePageTitle" id="homeTitleId"> 
                 {% block titleSection %}
                 {% endblock %}
             </div>
-            <div id="rightNav">
+            <div class="rightNav" id="rightNavId">
                 {% set slug = craft.app.request.getSegment(1)%}
                 {% for link in header.navigation.all() %}
                     {% set destination = link.linkDestination.one() %}
-
-                    <a href="{{ destination.url }}" class="nav-link {% if slug == destination.slug %}nav-link--active{% endif %}">{{ link.linkText }}</a>
+                    <a href="{{ destination.url }}" id="navLinkId" class="nav-link {% if slug == destination.slug %}nav-link--active{% endif %}">{{ link.linkText }}</a>
                 {% endfor %}
             </div>
         </nav>
@@ -30,8 +31,9 @@
     {# Templates Inserted here #}
     {# Condo Description under landing header#}
     <div class="mainContent">
-        <div class="headerImage">
-            <img src="{{ siteUrl }}assets/Images/HeaderImage.jpg" alt="Louisville Skyline">
+        <div id="headerImage">
+        {% block headerImage %}
+        {% endblock %}
             <div class="headerDescription">
                 {% block headerLandingContent %}
                 {% endblock %}
@@ -87,8 +89,7 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             </div>
         </div> 
-    </div>
-
+    
     {# <footer class="footer">
         {{ footer.richText }}
     </footer> #}
@@ -97,3 +98,22 @@
     
 </body>
 </html>
+
+
+{# // window.onscroll = function() {
+//     if ( window.pageYOffset > 1 ) {
+//         console.log("hit");
+ 
+//         var cols = document.getElementsByClassName('nav');
+//         for(i = 0; i < cols.length; i++) {
+//             cols[i].style.backgroundColor = 'blue';
+//         }
+//     } else {
+//         console.log("not hit");
+//         //nav.classList.remove("navbar1");
+//         var cols = document.getElementsByClassName('nav');
+//         for(i = 0; i < cols.length; i++) {
+//             cols[i].style.backgroundColor = 'transparent';
+//         }
+//     }
+// } #}

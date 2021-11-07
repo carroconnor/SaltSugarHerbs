@@ -1,0 +1,19 @@
+columnSuffix: glbycmex
+contentColumnType: text
+fieldGroup: 958d76f2-cfad-45a7-963e-1743105ad752 # Enupal Slider
+handle: enupalSliderLink
+instructions: 'Open Link on same window or new tab'
+name: Link
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: text
+  initialRows: '4'
+  multiline: ''
+  placeholder: 'Leave it blank to disable'
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: language
+type: craft\fields\PlainText

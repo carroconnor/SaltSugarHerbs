@@ -4,7 +4,11 @@ body {
     font-family: sans-serif;
     font-size: 16px;
     line-height: 1.4;
-    /* background-image: linear-gradient(#eeeded, white 40%); */
+    min-width: 100vh;
+  }
+
+  .car {
+    height: 600px;
   }
 
   .mainContent {
@@ -26,8 +30,10 @@ body {
     position: relative;
   }
 
-  .headerImage {
+  #headerImage {
     width: 100%;
+    max-height: 800px;
+    transition: ease all .5s;
     top: 0;
     left: 0;
   }
@@ -39,6 +45,7 @@ body {
 }
 
   /* Navigation */
+
   .nav {
     padding: 0 5%;
     display: flex;
@@ -46,20 +53,66 @@ body {
     width: 100%;
     position: fixed;
     z-index:9999999;
-    /* background: white; FF3.6+ */
-    /* border:2px solid #fff; */
-      /* box-shadow: 10px 10px 5px #ccc;
-      -moz-box-shadow: 10px 10px 5px #ccc;
-      -webkit-box-shadow: 0px 3px 5px #ccc;
-      -khtml-box-shadow: 10px 10px 5px #ccc; */
+    color: black;
+    background: -webkit-linear-gradient(#eee, #333);
+
+    background-size: 100% 200%;
+    background-image: linear-gradient(to bottom, transparent 50%, white 50%);
+    -webkit-transition: background-position 1s;
+    -moz-transition: background-position 1s;
+    transition: background-position 1.5s 0s;
+  }
+
+  .onScrollNav {
+    background-position: 0 -100% !important;
+    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%) !important;
+    transition: background-position 1s 0s, box-shadow 2s .5s;
+    transition-timing-function: ease-in-out;
+  }
+
+  .nav-link {
+    position: relative;
+    padding: 0 20px;
+    text-decoration: none;
+    color: inherit;
+    overflow: hidden;    
+    display: flex;
+    transition: background-color .2s ease;
+    font-family: sans-serif;
+    font-weight: 400;
+  }
+
+  .nav-link--active {
+    color: black;
+  }
+
+  .rightNav {
+    display: flex;
+    position: absolute;
+    right: 0px;
+    padding: 35px 10px 0px 0px;
+    transition: top ease 0.5s;
+  }
+
+  .homePageTitle{
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: xx-large;
+    text-align: center;
+    color: inherit;
+  }
+
+  .homePageTitleOnScroll {
+    color: black !important;
   }
 
   .headerDescription {
     position: absolute;
-    left: 1rem;
-    top: 11rem;
+    left: 50%;
+    margin: 0;
+    top: 50%;
+    transform: translate(-50%, -50%);
     color: white;
-    padding-left: 5%;
   }
 
   .button {
@@ -75,35 +128,6 @@ body {
   .iconStyle {
     color: #E61E4D;
     font-size: 30px;
-  }
-
-  .homePageTitle{
-    font-family: sans-serif;
-    font-weight: 400;
-    font-size: xx-large;
-    text-align: center;
-    color: white;
-  }
-  
-  .nav-link {
-    padding: 0 20px;
-    text-decoration: none;
-    color: white;
-    display: flex;
-    transition: background-color .2s ease;
-    font-family: sans-serif;
-    font-weight: 400;
-  }
-
-  #rightNav {
-    display: flex;
-    position: absolute;
-    right: 0px;
-    padding: 35px 10px 0px 0px;
-  }
-  
-  .nav-link--active {
-    color: black;
   }
   
   /* Content */

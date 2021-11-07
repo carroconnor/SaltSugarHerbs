@@ -1,0 +1,44 @@
+fieldLayouts:
+  0972c573-7e28-444c-ae22-ca05fa0b7763:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: a0334a8c-7d48-4775-9cfe-090432af78af # Html
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 562415a8-f8bd-4514-a7ca-cb7cc2892cdb # Link
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 0633e114-8fcc-4023-aa72-84446cfffb98 # Open Link In
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: 'Enupal Slider'
+        sortOrder: 1
+handle: enupalSlider
+hasUrls: true
+name: 'Enupal Slider'
+settings:
+  path: /Users/carr/Desktop/Craft-3.5.15.1/web/enupalslider
+sortOrder: 2
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+type: craft\volumes\Local
+url: /enupalslider/

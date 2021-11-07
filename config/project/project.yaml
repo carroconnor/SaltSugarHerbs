@@ -1,4 +1,4 @@
-dateModified: 1635044846
+dateModified: 1635223090
 email:
   fromEmail: carr.oconnor@gmail.com
   fromName: 'Louisville Condo'
@@ -14,15 +14,31 @@ meta:
     4bb733b4-211f-47a9-bc42-258bf24d0f89: 'Condo Title ' # Condo Title 
     30df8ec6-9014-4d28-8f15-ba9a922dce29: 'Landing Image' # Landing Image
     71bbb603-ab4b-4ae7-9fb5-0d76c40f5ec1: 'Condo Short Description' # Condo Short Description
+    80d4b117-2dff-4449-8700-1b82cf0fcaf8: 'Enupal Slider' # Enupal Slider
     91ede8c9-d8c0-455b-a302-adcfb2121874: 'Address Label' # Address Label
     107f4ccc-bdd5-4d1c-af75-50ff56ba625b: Uploads # Uploads
+    0633e114-8fcc-4023-aa72-84446cfffb98: 'Open Link In' # Open Link In
+    958d76f2-cfad-45a7-963e-1743105ad752: 'Enupal Slider' # Enupal Slider
     983d981c-8052-49a0-bd18-9d0cd36b1677: 'Public Schema' # Public Schema
+    562415a8-f8bd-4514-a7ca-cb7cc2892cdb: Link # Link
     85671307-1a72-4b4c-b41a-2d52423c2466: 'Landing Video' # Landing Video
+    a0334a8c-7d48-4775-9cfe-090432af78af: Html # Html
     bc7b7788-4348-4a7e-9a1d-015a3d266633: 'Louisville Condo' # Louisville Condo
     c2edb73b-ea93-43ba-be28-0a2d7ffac6b1: Footer # Footer
     c47948ee-a710-4991-a949-546994735a58: Home # Home
     e0356e54-854a-44a2-bf30-d368c7965eb6: Image # Image
 plugins:
+  enupal-slider:
+    enabled: true
+    licenseKey: OJ9622LY2OEQJ4KNCFI2SSS5
+    settings:
+      htmlHandle: enupalSliderHtml
+      linkHandle: enupalSliderLink
+      loadJquery: 1
+      openLinkHandle: enupalSliderOpenLink
+      pluginNameOverride: ''
+      volumeId: 2
+      volumeUid: 80d4b117-2dff-4449-8700-1b82cf0fcaf8 # Enupal Slider
   redactor:
     edition: standard
     enabled: true

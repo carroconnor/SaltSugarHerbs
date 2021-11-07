@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d37fc217edb2f89c75242e8cf7972657",
+    "content-hash": "1c8d3df7193bf7260a17310d1c666d14",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -836,6 +836,63 @@
             ],
             "description": "An SVG sanitizer for PHP",
             "time": "2021-08-09T23:46:54+00:00"
+        },
+        {
+            "name": "enupal/slider",
+            "version": "1.4.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/enupal/slider/zipball/1cb3b67dbc1a863329a9b44782a0e1812e75e82c",
+                "reference": "1cb3b67dbc1a863329a9b44782a0e1812e75e82c",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.1.0"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Enupal Slider",
+                "handle": "enupal-slider",
+                "hasSettings": true,
+                "changelogUrl": "https://raw.githubusercontent.com/enupal/slider/master/CHANGELOG.md",
+                "developer": "Enupal",
+                "class": "enupal\\slider\\Slider",
+                "components": {
+                    "app": "enupal\\slider\\services\\App"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "enupal\\slider\\": "src/"
+                }
+            },
+            "authors": [
+                {
+                    "name": "Enupal",
+                    "homepage": "http://enupal.com/"
+                }
+            ],
+            "description": "Fully responsive and customizable Slider plugin for Craft CMS",
+            "keywords": [
+                "carousel",
+                "cms",
+                "craft",
+                "craft-plugin",
+                "craftcms",
+                "fade",
+                "html",
+                "image",
+                "link",
+                "responsive",
+                "slide",
+                "slider"
+            ],
+            "support": {
+                "email": "info@enupal.com",
+                "issues": "https://github.com/enupal/slider/issues",
+                "docs": "https://enupal.com/craft-plugins/enupal-slider/docs"
+            },
+            "time": "2021-05-20T18:52:24+00:00"
         },
         {
             "name": "ezyang/htmlpurifier",
@@ -3476,11 +3533,11 @@
         },
         {
             "name": "voku/arrayy",
-            "version": "7.8.12",
+            "version": "7.8.13",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/voku/Arrayy/zipball/7afefce6de9207e5d15472061c85311c0e74e5e1",
-                "reference": "7afefce6de9207e5d15472061c85311c0e74e5e1",
+                "url": "https://api.github.com/repos/voku/Arrayy/zipball/ffaf679f3cb730c2706aa84be8c051e627999891",
+                "reference": "ffaf679f3cb730c2706aa84be8c051e627999891",
                 "shasum": ""
             },
             "require": {
@@ -3519,7 +3576,7 @@
                 "utility",
                 "utils"
             ],
-            "time": "2021-10-17T22:08:40+00:00"
+            "time": "2021-10-23T22:10:52+00:00"
         },
         {
             "name": "voku/email-check",

@@ -1,0 +1,35 @@
+columnSuffix: hwzzajsx
+contentColumnType: string
+fieldGroup: 958d76f2-cfad-45a7-963e-1743105ad752 # Enupal Slider
+handle: enupalSliderOpenLink
+instructions: 'Where should be opened the link?'
+name: 'Open Link In'
+searchable: false
+settings:
+  optgroups: true
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - 'Same window'
+        -
+          - value
+          - sameWindow
+        -
+          - default
+          - '1'
+    -
+      __assoc__:
+        -
+          - label
+          - 'New Tab or Window'
+        -
+          - value
+          - newTabOrWindow
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: language
+type: craft\fields\Dropdown

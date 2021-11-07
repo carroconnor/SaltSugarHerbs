@@ -1,0 +1,28 @@
+columnSuffix: jwzxoghc
+contentColumnType: text
+fieldGroup: 958d76f2-cfad-45a7-963e-1743105ad752 # Enupal Slider
+handle: enupalSliderHtml
+instructions: 'Override your image with custom HTML. Leave it blank to disable'
+name: Html
+searchable: false
+settings:
+  availableTransforms: '*'
+  availableVolumes: '*'
+  cleanupHtml: '1'
+  columnType: text
+  configSelectionMode: choose
+  defaultTransform: ''
+  manualConfig: ''
+  purifierConfig: ''
+  purifyHtml: '1'
+  redactorConfig: EnupalSlider.json
+  removeEmptyTags: true
+  removeInlineStyles: true
+  removeNbsp: true
+  showHtmlButtonForNonAdmins: false
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  uiMode: enlarged
+translationKeyFormat: null
+translationMethod: language
+type: craft\redactor\Field
