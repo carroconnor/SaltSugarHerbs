@@ -38,7 +38,16 @@
         
     {% endblock landingVideo %}
 
-    {% block blogTitleContent %}
+    {% block imageUnderHeader %}
+
+        {% set home = craft.entries.section("home").one() %}
+
+        {% set image = home.imageUnderHeader.first() %}
+                <img src='{{image.getUrl()}}' />
+
+    {% endblock %}
+
+    {# {% block blogTitleContent %}
 
         {% set post = craft.entries.section("blogPosts").one() %}
             
@@ -97,4 +106,4 @@
         </div>
     {% endfor %}
 
-    {% endblock %}  
+    {% endblock %}   #}

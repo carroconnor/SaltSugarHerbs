@@ -14,6 +14,7 @@ body {
   .mainContent {
     position: relative;
     height: 1000px;
+    background-color: white;
   }
 
   a { text-decoration: none !important; }
@@ -107,6 +108,8 @@ body {
 
   .headerDescription {
     position: absolute;
+    font-size: 24px;
+    font-weight: 900;
     left: 50%;
     margin: 0;
     top: 50%;
@@ -141,6 +144,7 @@ body {
   .descriptionUnderHeader{
     padding: 5em 0em 5em 0em;
     text-align: center;
+    background-color: inherit;
   }
 
   .grid4x2 {
