@@ -14,7 +14,7 @@
         {% set home = craft.entries.section("home").one() %}
 
         {% set image = entry.landingImage.first() %}
-                <img src='{{image.getUrl()}}' />
+                <img Id="headerImage" src='{{image.getUrl()}}' />
 
         {# {{ <img src="home.landingImage" alt="Louisville Skyline">  }} #}
     
