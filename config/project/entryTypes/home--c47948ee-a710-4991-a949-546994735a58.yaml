@@ -104,6 +104,19 @@ fieldLayouts:
             width: 100
         name: 'Image Gallery'
         sortOrder: 2
+      -
+        elements:
+          -
+            fieldUid: cb87e7da-2460-4db1-ac7f-771c8db1a924 # Short Interest
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: 'Short Interest'
+        sortOrder: 3
 handle: home
 hasTitleField: false
 name: Home

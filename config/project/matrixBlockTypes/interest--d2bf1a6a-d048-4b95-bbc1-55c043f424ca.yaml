@@ -1,0 +1,99 @@
+field: cb87e7da-2460-4db1-ac7f-771c8db1a924 # Short Interest
+fieldLayouts:
+  ac094c16-37a3-4909-815e-c08b687e83aa:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: bd950649-4585-4d1c-875f-4f12f21bfb0d # Interest Name
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: ba1b9198-280f-4494-b9c9-7783d9ae4068 # Interest Icon
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: e5152d9c-f61e-4c07-ba06-53053a65857b # Interest Description
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  ba1b9198-280f-4494-b9c9-7783d9ae4068: # Interest Icon
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: interestIcon
+    instructions: "The icon to use for your item.  Icons can be found at https://fontawesome.com/v5.15/icons \r\nFind an icon you like and copy the class name into here. So if the class tag says \"<i class=\"fas fa-users\"></i>\" then only input \"fas fa-users\"."
+    name: 'Interest Icon'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  bd950649-4585-4d1c-875f-4f12f21bfb0d: # Interest Name
+    columnSuffix: null
+    contentColumnType: string(200)
+    fieldGroup: null
+    handle: interestName
+    instructions: 'Title of your short interest'
+    name: 'Interest Name'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: 50
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  e5152d9c-f61e-4c07-ba06-53053a65857b: # Interest Description
+    columnSuffix: null
+    contentColumnType: string(2000)
+    fieldGroup: null
+    handle: interestDescription
+    instructions: 'Enter in a description of what you are trying to showcase. '
+    name: 'Interest Description'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: 500
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: interest
+name: Interest
+sortOrder: 1
