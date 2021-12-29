@@ -91,6 +91,19 @@ fieldLayouts:
             width: 100
         name: 'Landing Header Content'
         sortOrder: 1
+      -
+        elements:
+          -
+            fieldUid: c8dd77c4-a39e-423d-a678-f8aa004c246d # Gallery Item
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: 'Image Gallery'
+        sortOrder: 2
 handle: home
 hasTitleField: false
 name: Home

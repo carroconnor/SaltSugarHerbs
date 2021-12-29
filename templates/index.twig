@@ -42,9 +42,6 @@
         <div class="descriptionUnderHeader">
                 {% block imageUnderHeader %}
                 {% endblock %}
-            {# <p>3RD FLOOR CONDO #312</p>
-            <p>BEACH FRONT, PORT ARANSAS CONDO RENTAL</p>
-            <p>720 ACCESS ROAD 1-A PORT ARANSAS, TX 78373</p> #}
         </div>
 
         <div class="grid4x2">
@@ -89,7 +86,12 @@
                 <strong>Dining</strong>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             </div>
-        </div> 
+        </div>
+
+        <div class="grid6x2">
+            {% block featuredImageGallery %}
+            {% endblock %}
+        </div>
     
     {# <footer class="footer">
         {{ footer.richText }}
@@ -99,22 +101,3 @@
     
 </body>
 </html>
-
-
-{# // window.onscroll = function() {
-//     if ( window.pageYOffset > 1 ) {
-//         console.log("hit");
- 
-//         var cols = document.getElementsByClassName('nav');
-//         for(i = 0; i < cols.length; i++) {
-//             cols[i].style.backgroundColor = 'blue';
-//         }
-//     } else {
-//         console.log("not hit");
-//         //nav.classList.remove("navbar1");
-//         var cols = document.getElementsByClassName('nav');
-//         for(i = 0; i < cols.length; i++) {
-//             cols[i].style.backgroundColor = 'transparent';
-//         }
-//     }
-// } #}

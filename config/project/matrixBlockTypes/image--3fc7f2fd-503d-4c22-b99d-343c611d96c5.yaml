@@ -1,0 +1,196 @@
+field: c8dd77c4-a39e-423d-a678-f8aa004c246d # Gallery Item
+fieldLayouts:
+  7e6a7d05-5cfb-406b-96cb-ea784d9bc7c8:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 96a4443e-7c33-4e94-92fc-114ebc961d18 # Gallery Image
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 7b32ef01-59fc-4679-b9ac-7163dc7dd434 # Image Description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: be370ed1-b13e-4b09-9f9e-043c3f10dd5d # Image Category
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  7b32ef01-59fc-4679-b9ac-7163dc7dd434: # Image Description
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: imageDescription
+    instructions: 'Add a description to your image if you would like'
+    name: 'Image Description'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  96a4443e-7c33-4e94-92fc-114ebc961d18: # Gallery Image
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: galleryImage
+    instructions: 'Upload a picture for your gallery'
+    name: 'Gallery Image'
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowUploads: true
+      allowedKinds:
+        - image
+        - pdf
+      defaultUploadLocationSource: 'volume:107f4ccc-bdd5-4d1c-af75-50ff56ba625b' # Uploads
+      defaultUploadLocationSubpath: web/assets/Gallery
+      limit: '1'
+      localizeRelations: false
+      previewMode: full
+      restrictFiles: '1'
+      selectionLabel: 'Add an image'
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:107f4ccc-bdd5-4d1c-af75-50ff56ba625b' # Uploads
+      singleUploadLocationSubpath: ''
+      source: null
+      sources:
+        - 'volume:107f4ccc-bdd5-4d1c-af75-50ff56ba625b' # Uploads
+      targetSiteId: null
+      useSingleFolder: false
+      validateRelatedElements: false
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  be370ed1-b13e-4b09-9f9e-043c3f10dd5d: # Image Category
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: imageCategory
+    instructions: 'Select what category your image falls under'
+    name: 'Image Category'
+    searchable: false
+    settings:
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - Patio
+            -
+              - value
+              - patio
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - 'Overhead View'
+            -
+              - value
+              - overheadView
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - 'Living Area'
+            -
+              - value
+              - livingArea
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - 'Master Bedroom'
+            -
+              - value
+              - masterBedroom
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - 'Guest Bedroom'
+            -
+              - value
+              - guestBedroom
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - 'Master Bath'
+            -
+              - value
+              - masterBath
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - 'Guest Bath'
+            -
+              - value
+              - guestBath
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Kitchen
+            -
+              - value
+              - kitchen
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\RadioButtons
+handle: image
+name: Image
+sortOrder: 1

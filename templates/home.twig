@@ -47,6 +47,58 @@
 
     {% endblock %}
 
+    {% block featuredImageGallery %}
+
+    {% js %}
+        console.log('About to check for images');
+    {% endjs %}
+
+    {% set home = craft.entries.section("home").one() %}
+
+    {% set images = entry.galleryItem.all() %}
+
+    {% if images | length %}
+        {% js %}
+        console.log('We have images');
+        {% endjs %}
+        {% for item in images|slice(0, 5) %}
+            {% set query = item.galleryImage.one() %}
+            {% if loop.index == 1 %}
+                <div class="gal1">
+                    <a href="{{ query.getURL() }}" target="_blank">
+                        <img src="{{ query.getURL() }}" alt="image">
+                    </a>
+                </div>
+            {% elseif loop.index == 2 %}
+                <div class="gal2">
+                    <a href="{{ query.getURL() }}" target="_blank">
+                        <img src="{{ query.getURL() }}" alt="image">
+                    </a>
+                </div>  
+            {% elseif loop.index == 3 %}
+                <div class="gal3">
+                    <a href="{{ query.getURL() }}" target="_blank">
+                        <img src="{{ query.getURL() }}" alt="image">
+                    </a>
+                </div> 
+            {% elseif loop.index == 4 %}
+                <div class="gal4">
+                    <a href="{{ query.getURL() }}" target="_blank">
+                        <img src="{{ query.getURL() }}" alt="image">
+                    </a>
+                </div>   
+            {% elseif  loop.index == 5 %}
+                <div class="gal5">
+                    <a href="{{ query.getURL() }}" target="_blank">
+                        <img src="{{ query.getURL() }}" alt="image">
+                    </a>
+                </div> 
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+
+    {% endblock %}
+
     {# {% block blogTitleContent %}
 
         {% set post = craft.entries.section("blogPosts").one() %}

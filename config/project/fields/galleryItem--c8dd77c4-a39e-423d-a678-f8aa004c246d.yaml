@@ -1,0 +1,16 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: f5300c19-64f0-4ccd-b939-a88bf5724698
+handle: galleryItem
+instructions: 'Images that will be included in the gallery. The first five images will be your featured photos on your home page.'
+name: 'Gallery Item'
+searchable: false
+settings:
+  contentTable: '{{%matrixcontent_galleryitem}}'
+  maxBlocks: ''
+  minBlocks: ''
+  propagationKeyFormat: null
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix
