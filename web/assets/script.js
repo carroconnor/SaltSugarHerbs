@@ -8,9 +8,31 @@ window.onscroll = function() {
 
     if ( window.pageYOffset >= offSet ) {
         nav.classList.add("onScrollNav");
-        //rightNav.classList.remove("onScrollRightNav");
     } else {
         nav.classList.remove("onScrollNav");
-        //rightNav.classList.add("onScrollRightNav");
     }
+}
+
+window.onload = function(){
+
+    let modal = document.querySelector(".modal")
+    // let closeBtn = document.querySelector(".close-btn")
+
+    // // closeBtn.onclick = function(){
+    // //     modal.style.display = "none"
+    // // }
+    window.onclick = function(e){
+        console.log("function hit");
+        if(e.target == modal){
+            console.log("inner funtion hit");
+            modal.style.display = "none"
+        }
+    }
+
+}
+
+function openModal(){
+    let modal = document.querySelector(".modal")
+
+    modal.style.display = "block"
 }

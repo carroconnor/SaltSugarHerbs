@@ -15,8 +15,6 @@
 
         {% set image = entry.landingImage.first() %}
                 <img Id="headerImage" src='{{image.getUrl()}}' />
-
-        {# {{ <img src="home.landingImage" alt="Louisville Skyline">  }} #}
     
     {% endblock %}
 
@@ -49,52 +47,64 @@
 
     {% block featuredImageGallery %}
 
-    {% js %}
-        console.log('About to check for images');
-    {% endjs %}
+    {% set home = craft.entries.section("home").one() %}
+
+    {% set images = home.galleryItem.all() %}
+
+    {% if images | length %}
+
+        {% for item in images|slice(0, 5) %}
+
+            {% js %}
+            console.log('New feature Image');
+            {% endjs %}
+
+            {% set query = item.galleryImage.one() %}
+            {% if loop.index == 1 %}
+                <div class="gal1">
+                        <img src="{{ query.getURL() }}" onclick="openModal()" alt="image">
+                </div>
+            {% elseif loop.index == 2 %}
+                <div class="gal2">
+                        <img src="{{ query.getURL() }}" onclick="openModal()" alt="image">
+                </div>  
+            {% elseif loop.index == 3 %}
+                <div class="gal3" id="modal-btn">
+                        <img src="{{ query.getURL() }}" onclick="openModal()" alt="image">
+                </div> 
+            {% elseif loop.index == 4 %}
+                <div class="gal4" id="modal-btn">
+                        <img src="{{ query.getURL() }}" onclick="openModal()" alt="image">
+                </div>   
+            {% elseif  loop.index == 5 %}
+                <div class="gal5" id="modal-btn">
+                        <img src="{{ query.getURL() }}" onclick="openModal()" alt="image">
+                </div> 
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+
+    {% endblock %}
+
+    {# Image Gallery #}
+
+    {% block imageGallery %}
 
     {% set home = craft.entries.section("home").one() %}
 
     {% set images = home.galleryItem.all() %}
 
     {% if images | length %}
-        {% js %}
-        console.log('We have images');
-        {% endjs %}
-        {% for item in images|slice(0, 5) %}
-            {% set query = item.galleryImage.one() %}
-            {% if loop.index == 1 %}
-                <div class="gal1">
-                    <a href="{{ query.getURL() }}" target="_blank">
-                        <img src="{{ query.getURL() }}" alt="image">
-                    </a>
-                </div>
-            {% elseif loop.index == 2 %}
-                <div class="gal2">
-                    <a href="{{ query.getURL() }}" target="_blank">
-                        <img src="{{ query.getURL() }}" alt="image">
-                    </a>
-                </div>  
-            {% elseif loop.index == 3 %}
-                <div class="gal3">
-                    <a href="{{ query.getURL() }}" target="_blank">
-                        <img src="{{ query.getURL() }}" alt="image">
-                    </a>
-                </div> 
-            {% elseif loop.index == 4 %}
-                <div class="gal4">
-                    <a href="{{ query.getURL() }}" target="_blank">
-                        <img src="{{ query.getURL() }}" alt="image">
-                    </a>
-                </div>   
-            {% elseif  loop.index == 5 %}
-                <div class="gal5">
-                    <a href="{{ query.getURL() }}" target="_blank">
-                        <img src="{{ query.getURL() }}" alt="image">
-                    </a>
-                </div> 
-            {% endif %}
+
+        {% for item in images|batch(2) %}
+            <div class="row">
+                {% for img in item %}
+                    {% set query = img.galleryImage.one() %}
+                    <img class="galleryImage collumn" src="{{ query.getURL() }}" alt="image">
+                {% endfor %}
+            </div>
         {% endfor %}
+
     {% endif %}
 
     {% endblock %}
@@ -106,9 +116,9 @@
     {% set interests = home.shortInterest.all() %}
 
     {% if interests | length %}
-        {% js %}
+        {# {% js %}
         console.log('We have interests');
-        {% endjs %}
+        {% endjs %} #}
         {% for item in interests|slice(0, 2) %}
             {% set intName = item.interestName %}
             {% set intIcon = item.interestIcon %}
@@ -145,9 +155,9 @@
     {% set interests = home.shortInterest.all() %}
 
     {% if interests | length %}
-        {% js %}
+        {# {% js %}
         console.log('We have interests');
-        {% endjs %}
+        {% endjs %} #}
         {% for item in interests|slice(2, 2) %}
             {% set intName = item.interestName %}
             {% set intIcon = item.interestIcon %}
