@@ -100,7 +100,7 @@
             <div class="row">
                 {% for img in item %}
                     {% set query = img.galleryImage.one() %}
-                    <img class="galleryImage collumn" src="{{ query.getURL() }}" alt="image">
+                    <img class="galleryImage column" src="{{ query.getURL() }}" alt="image">
                 {% endfor %}
             </div>
         {% endfor %}
