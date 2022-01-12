@@ -35,9 +35,7 @@ function openModal(){
 }
 
 function openSlideShow(){
-    console.log("slide show open");
-    let modal = document.querySelector(".slideShowModal")
-
+    let modal = document.querySelector(".slideShowModal");
     modal.style.display = "block"
 
     var slideIndex = 1;
@@ -51,14 +49,13 @@ function plusSlides(n) {
 
 // Thumbnail image controls
 function currentSlide(n) {
-    let modal = document.querySelector(".slideShowModal")
+    let modal = document.querySelector(".slideShowModal");
+    modal.style.display = "block";
 
-    modal.style.display = "block"
     showSlides(slideIndex = n);
 }
 
 function showSlides(n) {
-    console.log(n);
     var i;
     var slides = document.getElementsByClassName("gallerySlides");
     // var dots = document.getElementsByClassName("dot");
@@ -72,13 +69,4 @@ function showSlides(n) {
     // }
     slides[slideIndex-1].style.display = "block";
     // dots[slideIndex-1].className += " active";
-}
-
-function findIndex(n) {
-    console.log(n);
-    var res = n*2;
-    if(n % 2 !== 0){
-        res = res -1;
-    }
-    return res; 
 }

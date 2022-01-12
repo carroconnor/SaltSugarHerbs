@@ -101,16 +101,11 @@
             {% set index = loop.index %}
                 {% for img in item %}
                     {% set query = img.galleryImage.one() %}
-                    <script>
-                        var index = {{ index }}
-                        var resIndex = findIndex(index)
-                    </script>
-
-                    
-                    {% if index == 1 %}
-
+                    {% set res = index * 2 %}
+                    {% if loop.index is divisible by(2) == false %}
+                        {% set res = res - 1 %}
                     {% endif %}
-                    <img class="galleryImage column" src="{{ query.getURL() }}" onclick="currentSlide(resIndex)" alt="image">
+                    <img class="galleryImage column" src="{{ query.getURL() }}" onclick="currentSlide({{res}})" alt="image">
                 {% endfor %}
             </div>
         {% endfor %}
