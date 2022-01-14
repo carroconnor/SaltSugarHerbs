@@ -1,15 +1,28 @@
 window.onscroll = function() {
+    let menuBtn = document.querySelector(".menuBtn");
     var nav = document.getElementById('navId');
-    var rightNav = document.getElementById('rightNavId');
 
     //header image bottom
-    var rightNav = document.getElementById('headerImage');
+    var rightNav = document.getElementById('headerContainer');
     var offSet = rightNav.offsetTop + rightNav.offsetHeight;
 
     if ( window.pageYOffset >= offSet ) {
         nav.classList.add("onScrollNav");
+        if (window.innerWidth < 600) {
+            console.log("hit");
+            menuBtn.style.visibility = "visible";
+            menuBtn.style.opacity = 1;
+         }
+          else {
+            console.log("not hit");
+            menuBtn.style.visibility = "hidden";
+            menuBtn.style.opacity = 0;
+
+         }
     } else {
         nav.classList.remove("onScrollNav");
+        menuBtn.style.visibility = "hidden";
+        menuBtn.style.opacity = 0;
     }
 }
 

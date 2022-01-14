@@ -25,12 +25,13 @@
                     <a href="{{ destination.url }}" id="navLinkId" class="nav-link {% if slug == destination.slug %}nav-link--active{% endif %}">{{ link.linkText }}</a>
                 {% endfor %}
             </div>
+            <button class="menuBtn" type="button" onclick="location.href='https://airbnb.com';"><p class="buttonText">Book Now</p></button>
         </nav>
     </header>
     {# Templates Inserted here #}
     {# Condo Description under landing header#}
     <div class="mainContent">
-        <div>
+        <div id="headerContainer">
         {% block headerImage %}
         {% endblock %}
             <div class="headerDescription">
@@ -80,6 +81,10 @@
             {% endblock %}
         </div>
     </div>
+
+    {# <div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3059.553024025635!2d-86.17087264970972!3d39.929017892980205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8814aca58d80e79f%3A0x9c795ad9bf120737!2s9671%20Copley%20Dr%2C%20Indianapolis%2C%20IN%2046290!5e0!3m2!1sen!2sus!4v1641960759604!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div> #}
     
     {# <footer class="footer">
         {{ footer.richText }}

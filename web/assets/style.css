@@ -33,12 +33,18 @@ body {
     font-family: 'Montserrat', serif;
   }
 
+  #headerContainer {
+    overflow: hidden;
+    max-height: 100vh;
+  }
+
   #headerImage {
     width: 100%;
-    max-height: 100vh;
+    height: auto;
+    /* max-height: 100vh; */
     transition: ease all .5s;
-    top: 0;
-    left: 0; 
+    top: -203px;
+    left: -0; 
   }
 
   h2 strong {
@@ -81,7 +87,7 @@ body {
     overflow: hidden;    
     display: flex;
     transition: background-color .2s ease;
-    font-weight: 400;
+    font-weight: 900;
   }
 
   .nav-link--active {
@@ -97,7 +103,7 @@ body {
   }
 
   .homePageTitle{
-    font-weight: 400;
+    font-weight: 900;
     font-size: xx-large;
     text-align: center;
     color: inherit;
@@ -279,24 +285,42 @@ body {
   }
 
   /* Material Button Design */
+  /* .menuBtnContainer {
+    display:flex;
+    justify-content: flex-end;
+  } */
 
-  .btn {
-    position: relative;
-  
-    display: block;
-    padding: 0;
-
+  .menuBtn {
+    opacity: 0;
+    visibility: hidden;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0px 0px 50px;
     overflow: hidden;
-  
     border-width: 0;
     outline: none;
     border-radius: 10px;
     box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
-    
     background-color: #E61E4D;
     color: #ecf0f1;
-    
-    z-index:9999998;
+    z-index:10;
+    transition: background-color .3s, visibility .5s, opacity 1s linear;
+  }
+
+  .btn {
+    position: relative;
+    display: block;
+    padding: 0;
+    overflow: hidden;
+    border-width: 0;
+    outline: none;
+    border-radius: 10px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+    background-color: #E61E4D;
+    color: #ecf0f1;
+    z-index:10;
     transition: background-color .3s;
   }
   
@@ -543,7 +567,29 @@ body {
 
   /* Smaller Screen Adjustments */
 
+  @media screen and (max-width: 800px){
+    #headerImage {
+      top: -50px;
+    }
+
+    .headerDescription {
+      top: 43%;
+    }
+
+    .rightNav {
+      display: none;
+    }
+  }
+
   @media screen and (max-width: 600px) {
+    .nav {
+      background-image: linear-gradient(to bottom, transparent 51%, white 49%);
+    }
+
+    .onScrollNav {
+      background-image: linear-gradient(to bottom, transparent 50%, white 50%);
+    }
+
     .card1 {
       grid-column: 1 / 3;
       grid-row: 1;
@@ -597,7 +643,7 @@ body {
 
     .homePageTitle{
       font-weight: 200;
-      font-size: mediu;
+      font-size: medium;
     }
 
     .headerDescription{
