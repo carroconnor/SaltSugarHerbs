@@ -64,7 +64,8 @@ body {
     z-index:2;
     color: black;
     background: -webkit-linear-gradient(#eee, #333);
-
+    justify-content: space-between;
+    align-items: center;
     background-size: 100% 200%;
     background-image: linear-gradient(to bottom, transparent 50%, white 50%);
     -webkit-transition: background-position 1s;
@@ -297,7 +298,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 10px 0px 0px 50px;
     overflow: hidden;
     border-width: 0;
     outline: none;
