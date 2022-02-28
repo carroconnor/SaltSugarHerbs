@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ siteName }}</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    {# <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat"> #}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ siteUrl }}/assets/style.css">
     <script src="https://kit.fontawesome.com/10519c6a79.js" crossorigin="anonymous"></script>
     <script src="{{ siteUrl }}/assets/script.js"></script>
@@ -67,10 +70,75 @@
             {% block featuredImageGallery %}
             {% endblock %}
         </div>
+
+        <div class="tableContainer">
+
+            <div class="tableCardHeader">
+                <strong>Around The Community</strong>
+            </div>
+
+            <div class="featureRow">
+                <div class="column">
+                    <img src="https://tpc.googlesyndication.com/simgad/12353471262514415399?" class="entImage"></img>
+                </div>
+                <div class="column">
+                    <div class="tableContainerCard">
+                        <div class="tableCardHeader">
+                            <strong>A Taste of Louisville</strong>
+                        </div>
+                        <div class="tableCardContent">
+                            <p>A culinary adventure in Louisville takes you deep into the heart of the Bourbon Country lifestyle. 
+                            But Bourbon isn’t the only star of our menus. Our chefs are taking traditional regional Southern dishes and 
+                            putting their own unique twists on them, making Louisville the epicenter for “New Southern Cuisine”. And of 
+                            course, you’ll need to learn the local food language of treats like: Benedictine, Burgoo, Modjeskas and the Hot 
+                            Brown. Don’t be afraid to ask!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="featureRow">
+                <div class="column">
+                    <div class="tableContainerCard">
+                        <div class="tableCardHeader">
+                            <strong>A Taste of Louisville</strong>
+                        </div>
+                        <div class="tableCardContent">
+                            <p>A culinary adventure in Louisville takes you deep into the heart of the Bourbon Country lifestyle. 
+                            But Bourbon isn’t the only star of our menus. Our chefs are taking traditional regional Southern dishes and 
+                            putting their own unique twists on them, making Louisville the epicenter for “New Southern Cuisine”. And of 
+                            course, you’ll need to learn the local food language of treats like: Benedictine, Burgoo, Modjeskas and the Hot 
+                            Brown. Don’t be afraid to ask!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <img src="https://tpc.googlesyndication.com/simgad/12353471262514415399?" class="entImage"></img>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer tableContainter">
+            <div class="row featureRow">
+                <div class=" column footerAddressColumn">
+                    <div class="footerCardHeader">
+                        <strong>Paddock 317</strong>
+                    </div>
+                    <div class="tableCardContent">
+                        <p>317 South Wenzel Street</p>
+                        <p>Louisville, KY</p>
+                        {# {{ footer.richText }} #}
+                    </div>
+                </div>
+                <div class="column footerAddressColumn">
+                    <iframe class="footerMapEmbedd" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3133.2494821956257!2d-85.73630394954878!3d38.25051949231892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886972da905cfba3%3A0xb401cffb518e9c51!2s317%20S%20Wenzel%20St%2C%20Louisville%2C%20KY%2040204!5e0!3m2!1sen!2sus!4v1646008478302!5m2!1sen!2sus" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="modal">
-        <div class="modal-content galleryContainer">
+        <div class="modal-content tableContainer">
 
             {% block imageGallery %}
             {% endblock %}
@@ -78,29 +146,11 @@
     </div>
 
     <div class="slideShowModal">
-        <div class="modal-content galleryContainer">
+        <div class="modal-content tableContainer">
             {% block imageSlideShow %}
             {% endblock %}
         </div>
     </div>
-
-    {# <div class="grid6x2">
-        <div class="leftFlex">
-            <img src="https://tpc.googlesyndication.com/simgad/12353471262514415399?" class="entImage"></img>
-        </div>
-        <div class="rightFlex">
-            <p>A Taste of Louisville</p>
-            <p>A culinary adventure in Louisville takes you deep into the heart of the Bourbon Country lifestyle. 
-            But Bourbon isn’t the only star of our menus. Our chefs are taking traditional regional Southern dishes and 
-            putting their own unique twists on them, making Louisville the epicenter for “New Southern Cuisine”. And of 
-            course, you’ll need to learn the local food language of treats like: Benedictine, Burgoo, Modjeskas and the Hot 
-            Brown. Don’t be afraid to ask!</p>
-        </div>
-    </div> #}
-
-    {# <div>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3059.553024025635!2d-86.17087264970972!3d39.929017892980205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8814aca58d80e79f%3A0x9c795ad9bf120737!2s9671%20Copley%20Dr%2C%20Indianapolis%2C%20IN%2046290!5e0!3m2!1sen!2sus!4v1641960759604!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-    </div> #}
     
     {# <footer class="footer">
         {{ footer.richText }}

@@ -151,25 +151,14 @@
             {% set intIcon = item.interestIcon %}
             {% set intDescription = item.interestDescription %}
 
-            {% if loop.index == 1 %}
-                <div class="card1">
-                    <span class="iconStyle">
-                        <i class="{{ intIcon }}"></i>
-                    </span>
-                    </br>
-                    <strong>{{ intName }}</strong>
-                    <p>{{ intDescription }}</p>
-                </div>
-            {% elseif loop.index == 2 %}
-                <div class="card2">
-                    <span class="iconStyle">
-                        <i class="{{ intIcon }}"></i>
-                    </span>
-                    </br>
-                    <strong>{{ intName }}</strong>
-                    <p>{{ intDescription }}</p>
-                </div>
-            {% endif %}
+            <div class="card card{{loop.index}}">
+                <span class="iconStyle">
+                    <i class="{{ intIcon }}"></i>
+                </span>
+                </br>
+                <strong>{{ intName }}</strong>
+                <p>{{ intDescription }}</p>
+            </div>
         {% endfor %}
     {% endif %}
 
@@ -190,87 +179,15 @@
             {% set intIcon = item.interestIcon %}
             {% set intDescription = item.interestDescription %}
 
-            {% if loop.index == 1 %}
-                <div class="card3">
-                    <span class="iconStyle">
-                        <i class="{{ intIcon }}"></i>
-                    </span>
-                    </br>
-                    <strong>{{ intName }}</strong>
-                    <p>{{ intDescription }}</p>
-                </div>
-            {% elseif loop.index == 2 %}
-                <div class="card4">
-                    <span class="iconStyle">
-                        <i class="{{ intIcon }}"></i>
-                    </span>
-                    </br>
-                    <strong>{{ intName }}</strong>
-                    <p>{{ intDescription }}</p>
-                </div>
-            {% endif %}
+            <div class="card card{{loop.index}}">
+                <span class="iconStyle">
+                    <i class="{{ intIcon }}"></i>
+                </span>
+                </br>
+                <strong>{{ intName }}</strong>
+                <p>{{ intDescription }}</p>
+            </div>
         {% endfor %}
     {% endif %}
 
     {% endblock %}
-
-    {# {% block blogTitleContent %}
-
-        {% set post = craft.entries.section("blogPosts").one() %}
-            
-        {{ post.blogTitle }}
-
-    {% endblock blogTitleContent %}
-    
-    {% block content %}
-
-
-    {% set post = craft.entries.section("blogPosts").one() %}
-
-    <p>
-    {{ post.richText|striptags|slice(0, 1000) }}
-    </p>
-
-    <div class="readMoreButton">
-            <a href="{{ post.url }}" class="button">Read More &gt;</a>
-    </div> 
-
-    {% endblock %}
-
-    {% block rightContent %}
-
-    {% set pic = craft.entries.section("blogPosts").one() %}
-
-    {% set post = craft.entries.section("blogPosts").one() %}
-
-    <a href="{{ post.url }}"><img src="{{ pic.featureImage.one().url }}" alt="" width="400"></a>
-    
-    {% endblock %}
-
-    {% block spotlightContent %}
-
-    {% set posts = craft.entries.section("blogPosts").all() %}
-
-    {% for post in posts|slice(0, 3) %}
-        <div class="spotlightPost">
-            <a href="{{ post.url }}"><img src="{{ post.featureImage.one().url }}" alt="" width="300"></a>
-            <strong style="color:#C6AFA5;">{{ post.blogTitle }}</strong>
-            <p>{{ post.foodDescription }}</p>
-        </div>
-    {% endfor %}
-
-    {% endblock %}
-
-    {% block secondRowSpotlight %}
-
-    {% set posts = craft.entries.section("blogPosts").all() %}
-
-    {% for post in posts|slice(3, 6) %}
-        <div class="spotlightPost">
-            <a href="{{ post.url }}"><img src="{{ post.featureImage.one().url }}" alt="" width="300"></a>
-            <strong style="color:#C6AFA5;">{{ post.blogTitle }}</strong>
-            <p>{{ post.foodDescription }}</p>
-        </div>
-    {% endfor %}
-
-    {% endblock %}   #}

@@ -8,21 +8,8 @@ window.onscroll = function() {
 
     if ( window.pageYOffset >= offSet ) {
         nav.classList.add("onScrollNav");
-        if (window.innerWidth < 600) {
-            console.log("hit");
-            menuBtn.style.visibility = "visible";
-            menuBtn.style.opacity = 1;
-         }
-          else {
-            console.log("not hit");
-            menuBtn.style.visibility = "hidden";
-            menuBtn.style.opacity = 0;
-
-         }
     } else {
         nav.classList.remove("onScrollNav");
-        menuBtn.style.visibility = "hidden";
-        menuBtn.style.opacity = 0;
     }
 }
 
