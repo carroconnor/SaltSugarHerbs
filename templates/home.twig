@@ -15,73 +15,73 @@
 
         {% set image = entry.landingImage.first() %}
                 <img Id="headerImage" src='{{image.getUrl()}}' />    
-    {% endblock %}
+        {% endblock %}
 
-    {% block headerLandingContent %}
+        {% block headerLandingContent %}
 
-        {% set home = craft.entries.section("home").one() %}
+            {% set home = craft.entries.section("home").one() %}
 
-        {{ home.condoShortDescription }}
+            {{ home.condoShortDescription }}
 
-        {{ home.addressLabel }}
+            {{ home.addressLabel }}
 
-    {% endblock headerLandingContent %}
+        {% endblock headerLandingContent %}
 
-    {% block landingVideo %}
+        {% block landingVideo %}
 
-        {% set home = craft.entries.section("home").one() %}
+            {% set home = craft.entries.section("home").one() %}
 
-        {{ home.landingVideo }}
-        
-    {% endblock landingVideo %}
+            {{ home.landingVideo }}
+            
+        {% endblock landingVideo %}
 
-    {% block imageUnderHeader %}
+        {% block imageUnderHeader %}
 
-        {% set home = craft.entries.section("home").one() %}
+            {% set home = craft.entries.section("home").one() %}
 
-        {% set image = home.imageUnderHeader.first() %}
-                <img src='{{image.getUrl()}}' />
+            {% set image = home.imageUnderHeader.first() %}
+                    <img src='{{image.getUrl()}}' />
 
     {% endblock %}
 
     {% block featuredImageGallery %}
 
-    {% set home = craft.entries.section("home").one() %}
+        {% set home = craft.entries.section("home").one() %}
 
-    {% set images = home.galleryItem.all() %}
+        {% set images = home.galleryItem.all() %}
 
-    {% if images | length %}
+        {% if images | length %}
 
-        {% for item in images|slice(0, 5) %}
+            {% for item in images|slice(0, 5) %}
 
-            {% js %}
-            console.log('New feature Image');
-            {% endjs %}
+                {% js %}
+                console.log('New feature Image');
+                {% endjs %}
 
-            {% set query = item.galleryImage.one() %}
-            {% if loop.index == 1 %}
-                <div class="gal1">
-                        <img src="{{ query.getURL() }}" onclick="openModal()" alt="image">
-                </div>
-            {% elseif loop.index == 2 %}
-                <div class="gal2">
-                        <img src="{{ query.getURL() }}" onclick="openModal()" alt="image">
-                </div>  
-            {% elseif loop.index == 3 %}
-                <div class="gal3" id="modal-btn">
-                        <img src="{{ query.getURL() }}" onclick="openModal()" alt="image">
-                </div> 
-            {% elseif loop.index == 4 %}
-                <div class="gal4" id="modal-btn">
-                        <img src="{{ query.getURL() }}" onclick="openModal()" alt="image">
-                </div>   
-            {% elseif  loop.index == 5 %}
-                <div class="gal5" id="modal-btn">
-                        <img src="{{ query.getURL() }}" onclick="openModal()" alt="image">
-                </div> 
-            {% endif %}
-        {% endfor %}
-    {% endif %}
+                {% set query = item.galleryImage.one() %}
+                {% if loop.index == 1 %}
+                    <div class="gal1">
+                            <img src="{{ query.getURL() }}" onclick="openModal()" alt="image">
+                    </div>
+                {% elseif loop.index == 2 %}
+                    <div class="gal2">
+                            <img src="{{ query.getURL() }}" onclick="openModal()" alt="image">
+                    </div>  
+                {% elseif loop.index == 3 %}
+                    <div class="gal3" id="modal-btn">
+                            <img src="{{ query.getURL() }}" onclick="openModal()" alt="image">
+                    </div> 
+                {% elseif loop.index == 4 %}
+                    <div class="gal4" id="modal-btn">
+                            <img src="{{ query.getURL() }}" onclick="openModal()" alt="image">
+                    </div>   
+                {% elseif  loop.index == 5 %}
+                    <div class="gal5" id="modal-btn">
+                            <img src="{{ query.getURL() }}" onclick="openModal()" alt="image">
+                    </div> 
+                {% endif %}
+            {% endfor %}
+        {% endif %}
 
     {% endblock %}
 
@@ -89,54 +89,186 @@
 
     {% block imageGallery %}
 
-    {% set home = craft.entries.section("home").one() %}
+        {% set home = craft.entries.section("home").one() %}
 
-    {% set images = home.galleryItem.all() %}
+        {% set images = home.galleryItem.all() %}
 
-    {% if images | length %}
+        {% if images | length %}
 
-        {% for item in images|batch(2) %}
-            <div class="row">
-            {% set index = loop.index %}
-                {% for img in item %}
-                    {% set query = img.galleryImage.one() %}
-                    {% set res = index * 2 %}
-                    {% if loop.index is divisible by(2) == false %}
-                        {% set res = res - 1 %}
-                    {% endif %}
-                    <img class="galleryImage column" src="{{ query.getURL() }}" onclick="currentSlide({{res}})" alt="image">
-                {% endfor %}
-            </div>
-        {% endfor %}
+            {% for item in images|batch(2) %}
+                <div class="row">
+                {% set index = loop.index %}
+                    {% for img in item %}
+                        {% set query = img.galleryImage.one() %}
+                        {% set res = index * 2 %}
+                        {% if loop.index is divisible by(2) == false %}
+                            {% set res = res - 1 %}
+                        {% endif %}
+                        <img class="galleryImage column" src="{{ query.getURL() }}" onclick="currentSlide({{res}})" alt="image">
+                    {% endfor %}
+                </div>
+            {% endfor %}
 
-    {% endif %}
+        {% endif %}
 
     {% endblock %}
 
     {% block imageSlideShow %}
 
-    {% set home = craft.entries.section("home").one() %}
+        {% set home = craft.entries.section("home").one() %}
 
-    {% set images = home.galleryItem.all() %}
+        {% set images = home.galleryItem.all() %}
 
-    {% if images | length %}
+        {% if images | length %}
 
-        {% for item in images %}
-            <div class="gallerySlides fade">
-                    {% set query = item.galleryImage.one() %}
-                    <img class="slideShowImage" src="{{ query.getURL() }}" alt="image">
-            </div>
-        {% endfor %}
+            {% for item in images %}
+                <div class="gallerySlides fade">
+                        {% set query = item.galleryImage.one() %}
+                        <img class="slideShowImage" src="{{ query.getURL() }}" alt="image">
+                </div>
+            {% endfor %}
 
-    <!-- Next and previous buttons -->
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
-    {% endif %}
+        {% endif %}
 
     {% endblock %}
 
-    {% block cardsFirstSet %}
+    {% block cards %}
+
+        {% set home = craft.entries.section("home").one() %}
+
+        {% set interests = home.shortInterest.all() %}
+
+        {% if interests | length %}
+            {% js %}
+            console.log('We have interests');
+            {% endjs %}
+            {% for item in interests %}
+                {% set intName = item.interestName %}
+                {% set intIcon = item.interestIcon %}
+                {% set intDescription = item.interestDescription %}
+
+                <div class="tableFeatureCard">
+                    <div class="featureCardIcon">
+                        <span class="iconStyle">
+                        <i class="{{ intIcon }}"></i>
+                    </span>
+                    </div>
+                    <div class="featureCardHeader">
+                        {{ intName }}
+                    </div>
+                    <div>
+                        {{ intDescription }}
+                    </div>
+                </div>
+            {% endfor %}
+        {% endif %} 
+
+    {% endblock %}
+
+    {% block secondaryCards %}
+        <div class="secondaryCard">
+            <span class="secondaryCardIcon">
+                <i class="fas fa-users"></i>
+            </span>
+            <div class="secondaryCardText">
+                Description
+            </div>
+        </div>
+        <div class="secondaryCard">
+            <span class="secondaryCardIcon">
+                <i class="fas fa-users"></i>
+            </span>
+            <div class="secondaryCardText">
+                Description
+            </div>
+        </div>
+        <div class="secondaryCard">
+            <span class="secondaryCardIcon">
+                <i class="fas fa-users"></i>
+            </span>
+            <div class="secondaryCardText">
+                Description
+            </div>
+        </div>
+        <div class="secondaryCard">
+            <span class="secondaryCardIcon">
+                <i class="fas fa-users"></i>
+            </span>
+            <div class="secondaryCardText">
+                Description
+            </div>
+        </div>
+        <div class="secondaryCard">
+            <span class="secondaryCardIcon">
+                <i class="fas fa-users"></i>
+            </span>
+            <div class="secondaryCardText">
+                Description
+            </div>
+        </div>
+        <div class="secondaryCard">
+            <span class="secondaryCardIcon">
+                <i class="fas fa-users"></i>
+            </span>
+            <div class="secondaryCardText">
+                Description
+            </div>
+        </div>
+        <div class="secondaryCard">
+            <span class="secondaryCardIcon">
+                <i class="fas fa-users"></i>
+            </span>
+            <div class="secondaryCardText">
+                Description
+            </div>
+        </div>
+        <div class="secondaryCard">
+            <span class="secondaryCardIcon">
+                <i class="fas fa-users"></i>
+            </span>
+            <div class="secondaryCardText">
+                Description
+            </div>
+        </div>
+        <div class="secondaryCard">
+            <span class="secondaryCardIcon">
+                <i class="fas fa-users"></i>
+            </span>
+            <div class="secondaryCardText">
+                Description
+            </div>
+        </div>
+        <div class="secondaryCard">
+            <span class="secondaryCardIcon">
+                <i class="fas fa-users"></i>
+            </span>
+            <div class="secondaryCardText">
+                Description
+            </div>
+        </div>
+        <div class="secondaryCard">
+            <span class="secondaryCardIcon">
+                <i class="fas fa-users"></i>
+            </span>
+            <div class="secondaryCardText">
+                Description
+            </div>
+        </div>
+        <div class="secondaryCard">
+            <span class="secondaryCardIcon">
+                <i class="fas fa-users"></i>
+            </span>
+            <div class="secondaryCardText">
+                Description
+            </div>
+        </div>
+    {% endblock %}
+
+    {# {% block cardsFirstSet %}
 
     {% set home = craft.entries.section("home").one() %}
 
@@ -146,7 +278,7 @@
         {# {% js %}
         console.log('We have interests');
         {% endjs %} #}
-        {% for item in interests|slice(0, 2) %}
+        {# {% for item in interests|slice(0, 2) %}
             {% set intName = item.interestName %}
             {% set intIcon = item.interestIcon %}
             {% set intDescription = item.interestDescription %}
@@ -160,9 +292,9 @@
                 <p>{{ intDescription }}</p>
             </div>
         {% endfor %}
-    {% endif %}
+    {% endif %} #}
 
-    {% endblock %}
+    {# {% endblock %}
 
     {% block cardsSecondSet %}
 
@@ -171,9 +303,6 @@
     {% set interests = home.shortInterest.all() %}
 
     {% if interests | length %}
-        {# {% js %}
-        console.log('We have interests');
-        {% endjs %} #}
         {% for item in interests|slice(2, 2) %}
             {% set intName = item.interestName %}
             {% set intIcon = item.interestIcon %}
@@ -189,5 +318,59 @@
             </div>
         {% endfor %}
     {% endif %}
+
+    {% endblock %} #}
+
+    {% block featuredInfoSection %}
+
+        {% set home = craft.entries.section("home").one() %}
+
+        {% set features = home.featuredInformation.all() %}
+
+        {% if features | length %}
+            {% for item in features %}
+                {% set fetTitle = item.featureTitle %}
+                {% set fetContent = item.featureContent %}
+                {% set fetImage = item.featureImage.one() %}
+
+                {% js %}
+                console.log('We have interests');
+                {% endjs %}
+
+                {% if loop.index is divisible by(2) == false %}
+                <div class="featureRow">
+                    <div class="column">
+                        <img src="{{ fetImage.getURL() }}" class="entImage"></img>
+                    </div>
+                    <div class="column">
+                        <div class="tableContainerCard">
+                            <div class="tableCardHeader">
+                                <strong>{{ fetTitle }}</strong>
+                            </div>
+                            <div class="tableCardContent">
+                                <p>{{ fetContent }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% else %}
+                <div class="alternateFeatureRow">
+                    <div class="column">
+                        <img src="{{ fetImage.getURL() }}" class="entImage"></img>
+                    </div>
+                    <div class="column">
+                        <div class="tableContainerCard">
+                            <div class="tableCardHeader">
+                                <strong>{{ fetTitle }}</strong>
+                            </div>
+                            <div class="tableCardContent">
+                                <p>{{ fetContent }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
 
     {% endblock %}

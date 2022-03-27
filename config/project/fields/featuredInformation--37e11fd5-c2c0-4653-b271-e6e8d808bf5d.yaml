@@ -1,0 +1,16 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: f5300c19-64f0-4ccd-b939-a88bf5724698
+handle: featuredInformation
+instructions: 'Website section to give out any featured information you would like by providing a title, content & image'
+name: 'Featured Information'
+searchable: false
+settings:
+  contentTable: '{{%matrixcontent_featuredinformation}}'
+  maxBlocks: ''
+  minBlocks: ''
+  propagationKeyFormat: null
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

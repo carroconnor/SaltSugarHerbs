@@ -117,6 +117,19 @@ fieldLayouts:
             width: 100
         name: 'Short Interest'
         sortOrder: 3
+      -
+        elements:
+          -
+            fieldUid: 37e11fd5-c2c0-4653-b271-e6e8d808bf5d # Featured Information
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: 'Featured Information'
+        sortOrder: 4
 handle: home
 hasTitleField: false
 name: Home

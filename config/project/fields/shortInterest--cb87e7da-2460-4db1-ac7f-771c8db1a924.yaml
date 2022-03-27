@@ -7,8 +7,8 @@ name: 'Short Interest'
 searchable: false
 settings:
   contentTable: '{{%matrixcontent_shortinterest}}'
-  maxBlocks: '4'
-  minBlocks: '4'
+  maxBlocks: '15'
+  minBlocks: '1'
   propagationKeyFormat: null
   propagationMethod: all
 translationKeyFormat: null

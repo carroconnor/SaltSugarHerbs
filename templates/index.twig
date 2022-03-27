@@ -49,6 +49,10 @@
             </div>
         </div>
         <div class="descriptionUnderHeader">
+            <p class="strongDescriptionHeader">Enjoy walkable NULU stores, bars & restaurants. Centrally-located between Downtown & Highlands.</p> </br>
+            <p class="strongDescriptionHeader">Enjoy walkable NULU stores, bars & restaurants. Centrally-located between Downtown & Highlands.</p> </br>
+        </div>
+        {# <div class="descriptionUnderHeader">
                 {% block imageUnderHeader %}
                 {% endblock %}
         </div>
@@ -64,11 +68,25 @@
             {% block cardsSecondSet %}
             {% endblock %}
 
-        </div>
+        </div> #}
 
         <div class="grid6x2">
             {% block featuredImageGallery %}
             {% endblock %}
+        </div>
+
+        <div class="tableContainer">
+            <strong>Details</strong>
+            <div class="flexContainer">
+                <div class="featureCardsFlex">
+                    {% block cards %}
+                    {% endblock %}
+                </div>
+                <div class="featureSecondaryCardsFlex">
+                    {% block secondaryCards %}
+                    {% endblock %}
+                </div>
+            </div>
         </div>
 
         <div class="tableContainer">
@@ -77,45 +95,9 @@
                 <strong>Around The Community</strong>
             </div>
 
-            <div class="featureRow">
-                <div class="column">
-                    <img src="https://tpc.googlesyndication.com/simgad/12353471262514415399?" class="entImage"></img>
-                </div>
-                <div class="column">
-                    <div class="tableContainerCard">
-                        <div class="tableCardHeader">
-                            <strong>A Taste of Louisville</strong>
-                        </div>
-                        <div class="tableCardContent">
-                            <p>A culinary adventure in Louisville takes you deep into the heart of the Bourbon Country lifestyle. 
-                            But Bourbon isn’t the only star of our menus. Our chefs are taking traditional regional Southern dishes and 
-                            putting their own unique twists on them, making Louisville the epicenter for “New Southern Cuisine”. And of 
-                            course, you’ll need to learn the local food language of treats like: Benedictine, Burgoo, Modjeskas and the Hot 
-                            Brown. Don’t be afraid to ask!</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            {% block featuredInfoSection %}
+            {% endblock %}
 
-            <div class="featureRow">
-                <div class="column">
-                    <div class="tableContainerCard">
-                        <div class="tableCardHeader">
-                            <strong>A Taste of Louisville</strong>
-                        </div>
-                        <div class="tableCardContent">
-                            <p>A culinary adventure in Louisville takes you deep into the heart of the Bourbon Country lifestyle. 
-                            But Bourbon isn’t the only star of our menus. Our chefs are taking traditional regional Southern dishes and 
-                            putting their own unique twists on them, making Louisville the epicenter for “New Southern Cuisine”. And of 
-                            course, you’ll need to learn the local food language of treats like: Benedictine, Burgoo, Modjeskas and the Hot 
-                            Brown. Don’t be afraid to ask!</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="column">
-                    <img src="https://tpc.googlesyndication.com/simgad/12353471262514415399?" class="entImage"></img>
-                </div>
-            </div>
         </div>
 
         <div class="footer tableContainter">
@@ -127,6 +109,7 @@
                     <div class="tableCardContent">
                         <p>317 South Wenzel Street</p>
                         <p>Louisville, KY</p>
+                        <button class="footerBtn">Book Now</button>
                         {# {{ footer.richText }} #}
                     </div>
                 </div>
@@ -151,10 +134,6 @@
             {% endblock %}
         </div>
     </div>
-    
-    {# <footer class="footer">
-        {{ footer.richText }}
-    </footer> #}
 
     <script src="{{ siteUrl }}assets/script.js">
     

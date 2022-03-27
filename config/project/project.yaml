@@ -1,4 +1,4 @@
-dateModified: 1640754214
+dateModified: 1647198107
 email:
   fromEmail: carr.oconnor@gmail.com
   fromName: 'Louisville Condo'
@@ -15,6 +15,7 @@ meta:
     4bb733b4-211f-47a9-bc42-258bf24d0f89: 'Condo Title ' # Condo Title 
     7b32ef01-59fc-4679-b9ac-7163dc7dd434: 'Image Description' # Image Description
     30df8ec6-9014-4d28-8f15-ba9a922dce29: 'Landing Image' # Landing Image
+    37e11fd5-c2c0-4653-b271-e6e8d808bf5d: 'Featured Information' # Featured Information
     71bbb603-ab4b-4ae7-9fb5-0d76c40f5ec1: 'Condo Short Description' # Condo Short Description
     80be797a-d96f-4f42-81ba-38d56638f4c2: test # test
     80d4b117-2dff-4449-8700-1b82cf0fcaf8: 'Enupal Slider' # Enupal Slider
@@ -25,8 +26,11 @@ meta:
     958d76f2-cfad-45a7-963e-1743105ad752: 'Enupal Slider' # Enupal Slider
     983d981c-8052-49a0-bd18-9d0cd36b1677: 'Public Schema' # Public Schema
     562415a8-f8bd-4514-a7ca-cb7cc2892cdb: Link # Link
+    846716b3-6db9-4ed0-9929-e813732a5c80: Title # Title
     85671307-1a72-4b4c-b41a-2d52423c2466: 'Landing Video' # Landing Video
     a0334a8c-7d48-4775-9cfe-090432af78af: Html # Html
+    a700da26-049b-43a9-bb7f-b0c9764325eb: Content # Content
+    b0a41033-b440-4cb5-999e-76d87de0ae30: Image # Image
     b6d3c6dd-f63a-48d2-9075-bb787c2e7cd0: 'Image Under Header' # Image Under Header
     ba1b9198-280f-4494-b9c9-7783d9ae4068: 'Interest Icon' # Interest Icon
     bc7b7788-4348-4a7e-9a1d-015a3d266633: 'Louisville Condo' # Louisville Condo
@@ -37,6 +41,7 @@ meta:
     c47948ee-a710-4991-a949-546994735a58: Home # Home
     cb87e7da-2460-4db1-ac7f-771c8db1a924: 'Short Interest' # Short Interest
     d2bf1a6a-d048-4b95-bbc1-55c043f424ca: Interest # Interest
+    d346521f-ef39-4eb6-8973-af9208a0d910: Feature # Feature
     e0356e54-854a-44a2-bf30-d368c7965eb6: Image # Image
     e5152d9c-f61e-4c07-ba06-53053a65857b: 'Interest Description' # Interest Description
 plugins:
