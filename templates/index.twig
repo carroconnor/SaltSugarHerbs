@@ -13,7 +13,6 @@
     <script src="{{ siteUrl }}/assets/script.js"></script>
     <script type="text/javascript" src="https://platform.hostfully.com/assets/js/pikaday.js"></script>
     <script type="text/javascript" src="https://platform.hostfully.com/assets/widgets/searchwidget/searchwidget.js"></script>
-    <script type="text/javascript" src='https://platform.hostfully.com/assets/js/orbirental_calendar_widget_v2.js'></script>
 </head>
 <body>
     {# Classic HTML & CSS page. Can use twig language throughout and reference blocs #}
@@ -27,10 +26,10 @@
                 {% set slug = craft.app.request.getSegment(1)%}
                 {% for link in header.navigation.all() %}
                     {% set destination = link.linkDestination.one() %}
-                    <a href="{{ destination.url }}" id="navLinkId" class="nav-link {% if slug == destination.slug %}nav-link--active{% endif %}">{{ link.linkText }}</a>
+                    <a href="#{{ link.linkText }}" id="navLinkId" class="nav-link {% if slug == destination.slug %}nav-link--active{% endif %}">{{ link.linkText }}</a>
                 {% endfor %}
             </div>
-            <button class="menuBtn" type="button" onclick="location.href='https://airbnb.com';"><p class="buttonText">Book Now</p></button>
+            <button class="menuBtn" type="button" onclick="location.href='https://platform.hostfully.com//search-rental-properties-v2/paddock-317';"><p class="buttonText">Book Now</p></button>
         </nav>
     </header>
     {# Templates Inserted here #}
@@ -70,18 +69,25 @@
 
         </div> #}
 
-        <div class="grid6x2">
+        <div class="grid4x2" id="Photos">
             {% block featuredImageGallery %}
             {% endblock %}
         </div>
 
-        <div class="tableContainer">
-            <strong>Details</strong>
-            <div class="flexContainer">
+        <div class="flexibleGrid6x2">
+            <div class="gridHeaderLeft">
+                <strong>Where you'll sleep</strong>
+            </div>
+            <div class="gridHeaderRight">
+                <strong>What we offer</strong>
+            </div>
+            <div class="gridFeatureLeft">
                 <div class="featureCardsFlex">
                     {% block cards %}
                     {% endblock %}
                 </div>
+            </div>
+            <div class="gridFeatureRight">
                 <div class="featureSecondaryCardsFlex">
                     {% block secondaryCards %}
                     {% endblock %}
@@ -89,9 +95,9 @@
             </div>
         </div>
 
-        <div class="tableContainer">
+        <div class="tableContainer" id="Experiences">
 
-            <div class="tableCardHeader">
+            <div class="tableCardHeader" id="Dining">
                 <strong>Around The Community</strong>
             </div>
 
@@ -141,12 +147,6 @@
 
     <script>
         var searchwidget = new SearchWidget('searchwidget', 'https://platform.hostfully.com//vacation-rental-properties-v2/paddock-317', {"lang":"US","fields":["checkIn","checkOut","guests"],"maximumGuests":30,"daysBetweenDates":7,"openInNewTab":false,"backgroundColorButton":"#FFFFFF","colorButton":"#000000","uid":"4b0d1398-3852-4bea-8b02-4cfc42b83959"});    
-        new orbiwidget('widget50427', {
-                id: 50427,
-                showTentative: 1,
-                monthsToDisplay: 2,
-                name: "Bright, new construction home in NULU"
-                });
     </script>
 </body>
 </html>

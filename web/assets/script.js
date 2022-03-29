@@ -28,6 +28,11 @@ window.onload = function(){
     }
 }
 
+function scrollTo(elementId){
+    console.log(elementId);
+    document.getElementById(elementId).scrollIntoView(true);
+}
+
 function openModal(){
     let modal = document.querySelector(".modal")
 
