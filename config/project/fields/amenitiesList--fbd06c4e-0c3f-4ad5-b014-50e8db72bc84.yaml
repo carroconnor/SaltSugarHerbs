@@ -1,12 +1,12 @@
 columnSuffix: null
 contentColumnType: string
 fieldGroup: f5300c19-64f0-4ccd-b939-a88bf5724698
-handle: featuredInformation
-instructions: 'Website section to give out any featured information you would like by providing a title, content & image'
-name: 'Featured Information'
+handle: amenitiesList
+instructions: 'List amenities and other features available for your property'
+name: 'Amenities List'
 searchable: true
 settings:
-  contentTable: '{{%matrixcontent_featuredinformation}}'
+  contentTable: '{{%matrixcontent_amenitieslist}}'
   maxBlocks: ''
   minBlocks: ''
   propagationKeyFormat: null

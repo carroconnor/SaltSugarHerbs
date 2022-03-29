@@ -1,4 +1,4 @@
-dateModified: 1647198107
+dateModified: 1648525736
 email:
   fromEmail: carr.oconnor@gmail.com
   fromName: 'Louisville Condo'
@@ -14,6 +14,7 @@ meta:
     4a93e8a5-0a43-4d07-bdc3-0f20f4a84f08: Text # Text
     4bb733b4-211f-47a9-bc42-258bf24d0f89: 'Condo Title ' # Condo Title 
     7b32ef01-59fc-4679-b9ac-7163dc7dd434: 'Image Description' # Image Description
+    18a16d10-3678-451e-b983-cf69831295a7: Feature # Feature
     30df8ec6-9014-4d28-8f15-ba9a922dce29: 'Landing Image' # Landing Image
     37e11fd5-c2c0-4653-b271-e6e8d808bf5d: 'Featured Information' # Featured Information
     71bbb603-ab4b-4ae7-9fb5-0d76c40f5ec1: 'Condo Short Description' # Condo Short Description
@@ -32,6 +33,7 @@ meta:
     a700da26-049b-43a9-bb7f-b0c9764325eb: Content # Content
     b0a41033-b440-4cb5-999e-76d87de0ae30: Image # Image
     b6d3c6dd-f63a-48d2-9075-bb787c2e7cd0: 'Image Under Header' # Image Under Header
+    b33bede8-4956-4ed2-96f5-203bc208448d: Text # Text
     ba1b9198-280f-4494-b9c9-7783d9ae4068: 'Interest Icon' # Interest Icon
     bc7b7788-4348-4a7e-9a1d-015a3d266633: 'Louisville Condo' # Louisville Condo
     bd950649-4585-4d1c-875f-4f12f21bfb0d: 'Interest Name' # Interest Name
@@ -44,6 +46,8 @@ meta:
     d346521f-ef39-4eb6-8973-af9208a0d910: Feature # Feature
     e0356e54-854a-44a2-bf30-d368c7965eb6: Image # Image
     e5152d9c-f61e-4c07-ba06-53053a65857b: 'Interest Description' # Interest Description
+    f625ec51-6be0-4c94-a957-65f306264940: Icon # Icon
+    fbd06c4e-0c3f-4ad5-b014-50e8db72bc84: 'Amenities List' # Amenities List
 plugins:
   enupal-slider:
     enabled: true

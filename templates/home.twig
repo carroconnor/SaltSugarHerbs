@@ -170,156 +170,25 @@
     {% endblock %}
 
     {% block secondaryCards %}
-        <div class="secondaryCard">
-            <span class="secondaryCardIcon">
-                <i class="fas fa-users"></i>
-            </span>
-            <div class="secondaryCardText">
-                Description
+        {% set home = craft.entries.section("home").one() %}
+        {% set amenities = home.amenitiesList.all() %}
+
+        {% if amenities | length %}
+
+        {% for item in amenities %}
+            <div class="secondaryCard">
+                <span class="secondaryCardIcon">
+                    <i class="{{ item.icon }}"></i>
+                </span>
+                <div class="secondaryCardText">
+                    {{ item.text }}
+                </div>
             </div>
-        </div>
-        <div class="secondaryCard">
-            <span class="secondaryCardIcon">
-                <i class="fas fa-users"></i>
-            </span>
-            <div class="secondaryCardText">
-                Description
-            </div>
-        </div>
-        <div class="secondaryCard">
-            <span class="secondaryCardIcon">
-                <i class="fas fa-users"></i>
-            </span>
-            <div class="secondaryCardText">
-                Description
-            </div>
-        </div>
-        <div class="secondaryCard">
-            <span class="secondaryCardIcon">
-                <i class="fas fa-users"></i>
-            </span>
-            <div class="secondaryCardText">
-                Description
-            </div>
-        </div>
-        <div class="secondaryCard">
-            <span class="secondaryCardIcon">
-                <i class="fas fa-users"></i>
-            </span>
-            <div class="secondaryCardText">
-                Description
-            </div>
-        </div>
-        <div class="secondaryCard">
-            <span class="secondaryCardIcon">
-                <i class="fas fa-users"></i>
-            </span>
-            <div class="secondaryCardText">
-                Description
-            </div>
-        </div>
-        <div class="secondaryCard">
-            <span class="secondaryCardIcon">
-                <i class="fas fa-users"></i>
-            </span>
-            <div class="secondaryCardText">
-                Description
-            </div>
-        </div>
-        <div class="secondaryCard">
-            <span class="secondaryCardIcon">
-                <i class="fas fa-users"></i>
-            </span>
-            <div class="secondaryCardText">
-                Description
-            </div>
-        </div>
-        <div class="secondaryCard">
-            <span class="secondaryCardIcon">
-                <i class="fas fa-users"></i>
-            </span>
-            <div class="secondaryCardText">
-                Description
-            </div>
-        </div>
-        <div class="secondaryCard">
-            <span class="secondaryCardIcon">
-                <i class="fas fa-users"></i>
-            </span>
-            <div class="secondaryCardText">
-                Description
-            </div>
-        </div>
-        <div class="secondaryCard">
-            <span class="secondaryCardIcon">
-                <i class="fas fa-users"></i>
-            </span>
-            <div class="secondaryCardText">
-                Description
-            </div>
-        </div>
-        <div class="secondaryCard">
-            <span class="secondaryCardIcon">
-                <i class="fas fa-users"></i>
-            </span>
-            <div class="secondaryCardText">
-                Description
-            </div>
-        </div>
+        {% endfor %}
+
+        {% endif %}
+
     {% endblock %}
-
-    {# {% block cardsFirstSet %}
-
-    {% set home = craft.entries.section("home").one() %}
-
-    {% set interests = home.shortInterest.all() %}
-
-    {% if interests | length %}
-        {# {% js %}
-        console.log('We have interests');
-        {% endjs %} #}
-        {# {% for item in interests|slice(0, 2) %}
-            {% set intName = item.interestName %}
-            {% set intIcon = item.interestIcon %}
-            {% set intDescription = item.interestDescription %}
-
-            <div class="card card{{loop.index}}">
-                <span class="iconStyle">
-                    <i class="{{ intIcon }}"></i>
-                </span>
-                </br>
-                <strong>{{ intName }}</strong>
-                <p>{{ intDescription }}</p>
-            </div>
-        {% endfor %}
-    {% endif %} #}
-
-    {# {% endblock %}
-
-    {% block cardsSecondSet %}
-
-    {% set home = craft.entries.section("home").one() %}
-
-    {% set interests = home.shortInterest.all() %}
-
-    {% if interests | length %}
-        {% for item in interests|slice(2, 2) %}
-            {% set intName = item.interestName %}
-            {% set intIcon = item.interestIcon %}
-            {% set intDescription = item.interestDescription %}
-
-            <div class="card card{{loop.index}}">
-                <span class="iconStyle">
-                    <i class="{{ intIcon }}"></i>
-                </span>
-                </br>
-                <strong>{{ intName }}</strong>
-                <p>{{ intDescription }}</p>
-            </div>
-        {% endfor %}
-    {% endif %}
-
-    {% endblock %} #}
 
     {% block featuredInfoSection %}
 
