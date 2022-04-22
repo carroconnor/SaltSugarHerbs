@@ -851,10 +851,6 @@ body {
 
     /* grid items */
 
-    .secondaryCard {
-      justify-content: center;
-    }
-
     .grid4x2{
       grid-template-columns: repeat(2, 1fr);
     }
