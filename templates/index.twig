@@ -29,7 +29,7 @@
                     <a href="#{{ link.linkText }}" id="navLinkId" class="nav-link {% if slug == destination.slug %}nav-link--active{% endif %}">{{ link.linkText }}</a>
                 {% endfor %}
             </div>
-            <button class="menuBtn" type="button" onclick="location.href='https://platform.hostfully.com//search-rental-properties-v2/paddock-317';"><p class="buttonText">Book Now</p></button>
+            <button class="menuBtn" type="button" onclick="location.href='https://platform.hostfully.com/vacation-rental-property-v2/50427/bright%2C-new-construction-home-in-nulu';"><p class="buttonText">Book Now</p></button>
         </nav>
     </header>
     {# Templates Inserted here #}
@@ -43,7 +43,7 @@
                 {% block headerLandingContent %}
                 {% endblock %}
                 </div>
-            <button class="btn" type="button" onclick="location.href='https://airbnb.com';"><p class="buttonText">Book Now</p></button>
+            <button class="btn" type="button" onclick="location.href='https://platform.hostfully.com/vacation-rental-property-v2/50427/bright%2C-new-construction-home-in-nulu';"><p class="buttonText">Book Now</p></button>
             <div id="searchwidget" ></div>
             </div>
         </div>
@@ -98,7 +98,7 @@
                     <div class="tableCardContent">
                         <p>317 South Wenzel Street</p>
                         <p>Louisville, KY</p>
-                        <button class="footerBtn">Book Now</button>
+                        <button onclick="location.href='https://platform.hostfully.com/vacation-rental-property-v2/50427/bright%2C-new-construction-home-in-nulu';" class="footerBtn">Book Now</button>
                         {# {{ footer.richText }} #}
                     </div>
                 </div>
@@ -111,7 +111,7 @@
 
     <div class="modal">
         <div class="modal-content tableContainer">
-
+            <i class="fas fa-xmark actionButton" onclick="closeModal()"></i>
             {% block imageGallery %}
             {% endblock %}
         </div>
@@ -119,6 +119,7 @@
 
     <div class="slideShowModal">
         <div class="modal-content tableContainer">
+            <i class="fas fa-xmark actionButton" onclick="closeSlideShow()"></i>
             {% block imageSlideShow %}
             {% endblock %}
         </div>

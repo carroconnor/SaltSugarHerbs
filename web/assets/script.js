@@ -15,14 +15,14 @@ window.onscroll = function() {
 window.onload = function(){
 
     let modal = document.querySelector(".modal");
-    let slideShow = document.querySelector(".slideShowModal")
+    let slideShow = document.querySelector(".slideShowModal");
 
     window.onclick = function(e){
         if(e.target == slideShow){
-            slideShow.style.display = "none"
+            slideShow.style.display = "none";
         }
         else if(e.target == modal){
-            modal.style.display = "none"
+            modal.style.display = "none";
         }
     }
 }
@@ -32,18 +32,28 @@ function scrollTo(elementId){
     document.getElementById(elementId).scrollIntoView(true);
 }
 
-function openModal(){
-    let modal = document.querySelector(".modal")
+function closeModal(){
+    let modal = document.querySelector(".modal");
+    modal.style.display = "none";
+}
 
-    modal.style.display = "block"
+function openModal(){
+    let modal = document.querySelector(".modal");
+
+    modal.style.display = "block";
 }
 
 function openSlideShow(){
     let modal = document.querySelector(".slideShowModal");
-    modal.style.display = "block"
+    modal.style.display = "block";
 
     var slideIndex = 1;
     showSlides(slideIndex);
+}
+
+function closeSlideShow(){
+    let modal = document.querySelector(".slideShowModal");
+    modal.style.display = "none";
 }
 
 // Next/previous controls
