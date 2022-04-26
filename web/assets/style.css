@@ -41,8 +41,6 @@ body {
 
   #headerImage {
     width: 100%;
-    height: auto;
-    /* max-height: 100vh; */
     transition: ease all .5s;
     top: -203px;
     left: -0; 
@@ -119,13 +117,12 @@ body {
   .headerDescription {
     position: absolute;
     font-size: 24px;
-    font-weight: 900;
     left: 50%;
     margin: 0;
     top: 50%;
     transform: translate(-50%, -50%);
     color: black;
-    background-color: rgba(224,224,224, .7);
+    background-color: rgba(255,255,255, .5);
     border-radius: 14px;
   }
 
@@ -157,15 +154,18 @@ body {
   }
 
   .descriptionUnderHeader{
-    padding: 5em 0em 5em 0em;
+    padding: 5em 0px 5em 0px;
+    margin: 0px 300px 0px 300px;
     text-align: center;
     background-color: inherit;
+    font-size: 26px;
+    font-weight: 600;
   }
 
   .btn {
     position: relative;
     display: none;
-    padding: 0;
+    padding: 2px 9px;
     overflow: hidden;
     border-width: 0;
     outline: none;
@@ -174,6 +174,7 @@ body {
     background-color: #E61E4D;
     color: #ecf0f1;
     z-index:10;
+    text-transform: uppercase;
     transition: background-color .3s;
   }
   
@@ -226,11 +227,14 @@ body {
   .hostfully-search-widget-form button {
     flex: 0 1 15%;
     background-color: #E61E4D !important;
+    box-shadow: 0 1px 4px rgb(0 0 0 / 60%);
     border-radius: 10px !important;
     text-align: center !important;
     width: 180px !important;
     height: 3.8rem !important;
     border: 0 none !important;
+    text-transform: uppercase;
+    font-weight: 600;
     padding: 0px 30px 0px 30px !important;
     letter-spacing: .2rem !important;
     color: #ecf0f1 !important;
@@ -241,15 +245,17 @@ body {
 
   .footerAddressColumn button{
     flex: 0 1 15%;
-    background-color: #E61E4D !important;
-    border-radius: 10px !important;
-    text-align: center !important;
-    width: 180px !important;
-    height: 3.8rem !important;
+    background-color: #E61E4D;
+    box-shadow: 0 1px 4px rgb(0 0 0 / 60%);
+    border-radius: 10px;
+    text-align: center;
+    width: 180px;
+    height: 3.8rem;
     border: 0 none !important;
-    padding: 0px 30px 0px 30px !important;
     margin: 2em 0em 0em 0em;
     letter-spacing: .2rem !important;
+    text-transform: uppercase;
+    font-weight: 900;
     color: #ecf0f1 !important;
     font-size: 16px !important;
     font-family: 'Montserrat', serif !important; 
@@ -358,24 +364,29 @@ body {
 }
 
   .gridHeaderLeft{
-    grid-column: 1/5;
+    grid-column: 1/4;
     grid-row: 1;
-    padding: 1.5em 0em;
+    padding: 70px 0em 1.5em 0em;
   }
 
   .gridHeaderRight {
-    grid-column: 5;
+    grid-column: 4/7;
     grid-row: 1;
-    padding: 1.5em 0em;
+    padding: 70px 0em 1.5em 0em;
+  }
+
+  .gridHeaderRight strong, .gridHeaderLeft strong {
+    font-size: 31px;
+    margin-bottom: 50px;
   }
 
   .gridFeatureLeft {
-    grid-column: 1/5;
+    grid-column: 1/4;
     grid-row: 2;
   }
 
   .gridFeatureRight {
-    grid-column: 5/7; 
+    grid-column: 4/7;
     grid-row: 2;
   }
 
@@ -446,11 +457,11 @@ body {
     padding: 0em 0em 1em 1em;
   }
 
-  .strongDescriptionHeader {
+  /* .strongDescriptionHeader {
     font-size: 16px;
     font-weight: 600;
     padding: 1em 0em 1em 0em;
-  }
+  } */
 
   .footerAddressColumn {
     max-height: 300px;
@@ -486,8 +497,10 @@ body {
   }
 
   .buttonText {
-    padding: 0px 30px 0px 30px;
+    padding: 2px 23px;
     letter-spacing: .2rem;
+    font-weight: 900;
+    text-transform: uppercase;
     color: white !important;
     font-size: 16px;
     font-family: 'Montserrat', serif;
@@ -620,28 +633,31 @@ body {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
   }
 
   .featureSecondaryCardsFlex {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
-
   }
 
   .secondaryCard {
     display: flex;
     flex-direction: row;
-    width: 50%;   
-    align-items: flex-start; 
+    width: 50%;
+    align-items: center;
+    margin-bottom: 25px;
   }
 
   .secondaryCardIcon {
     padding: .2em .2em;
+    font-size: 25px;
   }
 
   .secondaryCardText {
-    padding: .2em .2em;
+    padding: 0.2em 0.2em;
+    font-size: 21px;
   }
 
   .featureCardIcon {
@@ -658,8 +674,9 @@ body {
     border: 1px solid rgb(221, 221, 221);
     border-radius: 12px;
     padding: 1.5em;
-    width: 13em;
-    margin: 1em;
+    width: 12em;
+    margin-right: 1em;
+    margin-bottom: 1em;
   }
 
   .featureCardHeader {
@@ -669,23 +686,21 @@ body {
     margin-bottom: 8px;
   }
 
-  .tableContainerCard strong {
-    font-size: 16px;
-  }
-
   .tableCardHeader {
-    text-align: center;
-    font-size: 25px;
+    font-size: 32px;
     font-weight: 450;
+    padding: 70px 0px 70px 0px;
   }
 
-  .tableCardSubtitle {
-    padding: 0em 0em 1em 0em;
+  .tableCardSubtite {
+    font-size: 32px;
+    font-weight: 450;
+    padding: 65px 0px;
   }
 
   .tableCardContent {
-    padding: 0em 2em 0em 2em;
     line-height: 1.6em;
+    padding-left: 1.5em;
   }
 
 
@@ -749,6 +764,19 @@ body {
   @media screen and (max-width: 800px){
     #headerImage {
       top: -50px;
+      min-height: 100vh;
+      min-width: 100vh;
+    }
+
+    .secondaryCardIcon {
+      font-size: 25px;
+    }
+  
+    .secondaryCardText {
+      font-size: 21px;
+    }
+    .buttonText{
+      font-size: 12px;
     }
 
     .footerCardHeader{
@@ -757,7 +785,6 @@ body {
 
     .featureCardsFlex {
       width: 100%;
-      justify-content: center;
     }
 
     .featureSecondaryCardsFlex {
@@ -768,7 +795,12 @@ body {
     .tableFeatureCard {
       padding: .5em;
       width: 9em;
-      margin: .2em;
+      margin-right: 0em;
+      margin-left: 0em;
+    }
+
+    .tableCardContent {
+      padding-left: 0em;
     }
 
     .footerAddressColumn {
@@ -778,10 +810,10 @@ body {
 
     .headerDescription {
       top: 43%;
-    }
-
-    .column {
-      align-items: center;
+      padding: 15px;
+      width: 90%;
+      background-color: rgba(255,255,255, .6);
+      backdrop-filter: blur(5px);
     }
 
     .rightNav {
@@ -794,8 +826,17 @@ body {
       background-image: linear-gradient(to bottom, transparent 51%, white 49%);
     }
 
+    .descriptionUnderHeader {
+      margin: 0px 66px 0px 50px;
+      font-size: 24px;
+    }
+
     .featureRow {
       flex-direction: column;
+    }
+
+    .column {
+      padding: 5px 0px;
     }
 
     .alternateFeatureRow {
@@ -813,11 +854,6 @@ body {
     .btn {
       display: block;
     }
-
-    .headerDescription{
-      background-color: transparent;
-    }
-
 
     .onScrollNav .menuBtn {
       display: flex;
@@ -839,17 +875,8 @@ body {
       font-size: medium;
     }
 
-    .headerDescription{
-      font-size: 15px;
-      font-weight: 450;
-    }
-
     .headerText {
       padding: 0;
-    }
-
-    .buttonText{
-      font-size: 10px;
     }
 
     /* grid items */
@@ -886,13 +913,11 @@ body {
     .gridHeaderLeft{
       grid-column: 1/7;
       grid-row: 1;
-      text-align: center;
     }
   
     .gridHeaderRight {
       grid-column: 1/7;
       grid-row: 3;
-      text-align: center;
     }
   
     .gridFeatureLeft {
@@ -903,6 +928,10 @@ body {
     .gridFeatureRight {
       grid-column: 1/7; 
       grid-row: 4;
+    }
+
+    .footerAddressColumn {
+      margin-top: 50px;
     }
   }
   
