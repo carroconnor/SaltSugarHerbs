@@ -689,7 +689,7 @@ body {
   .tableCardHeader {
     font-size: 32px;
     font-weight: 450;
-    padding: 70px 0px 70px 0px;
+    padding: 70px 0px 70px 20px;
   }
 
   .tableCardSubtite {
@@ -767,6 +767,10 @@ body {
       min-height: 100vh;
       min-width: 100vh;
     }
+
+    .tableCardHeader {
+      padding: 70px 0px 70px 0px;
+  }
 
     .secondaryCardIcon {
       font-size: 25px;
