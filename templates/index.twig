@@ -26,7 +26,7 @@
                 {% set slug = craft.app.request.getSegment(1)%}
                 {% for link in header.navigation.all() %}
                     {% set destination = link.linkDestination.one() %}
-                    <a href="#{{ link.linkText }}" id="navLinkId" class="nav-link {% if slug == destination.slug %}nav-link--active{% endif %}">{{ link.linkText }}</a>
+                    <a href="{{ link.linkUrl }}" id="navLinkId" class="nav-link {% if slug == destination.slug %}nav-link--active{% endif %}">{{ link.linkText }}</a>
                 {% endfor %}
             </div>
             <button class="menuBtn" type="button" onclick="location.href='https://platform.hostfully.com/vacation-rental-property-v2/50427/bright%2C-new-construction-home-in-nulu';"><p class="buttonText">Book Now</p></button>

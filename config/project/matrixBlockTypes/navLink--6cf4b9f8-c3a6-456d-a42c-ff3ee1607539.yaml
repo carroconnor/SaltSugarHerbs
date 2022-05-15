@@ -1,11 +1,11 @@
-field: 13642bff-bb9c-4352-aaa6-ca00b85829d2
+field: 13642bff-bb9c-4352-aaa6-ca00b85829d2 # Navigation
 fieldLayouts:
   09f09241-2268-49ee-b11e-673e874b6cbe:
     tabs:
       -
         elements:
           -
-            fieldUid: 48ba5964-ac9b-478d-961d-d7f162d4f83f
+            fieldUid: 48ba5964-ac9b-478d-961d-d7f162d4f83f # Link Text
             instructions: null
             label: null
             required: true
@@ -14,7 +14,16 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: b500bcf7-668f-4a09-abd7-a0c0a459c7b7
+            fieldUid: b500bcf7-668f-4a09-abd7-a0c0a459c7b7 # Link Destination
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 20031374-ff5a-4edc-8455-b313b1ff8886 # Link Url
             instructions: null
             label: null
             required: false
@@ -25,7 +34,8 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  48ba5964-ac9b-478d-961d-d7f162d4f83f:
+  48ba5964-ac9b-478d-961d-d7f162d4f83f: # Link Text
+    columnSuffix: null
     contentColumnType: text
     fieldGroup: null
     handle: linkText
@@ -39,12 +49,33 @@ fields:
       columnType: null
       initialRows: '4'
       multiline: ''
-      placeholder: ''
+      placeholder: null
       uiMode: normal
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
-  b500bcf7-668f-4a09-abd7-a0c0a459c7b7:
+  20031374-ff5a-4edc-8455-b313b1ff8886: # Link Url
+    columnSuffix: nklgvbrm
+    contentColumnType: text
+    fieldGroup: null
+    handle: linkUrl
+    instructions: 'Address where the link will navigate to'
+    name: 'Link Url'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: '#AddUrlHere'
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  b500bcf7-668f-4a09-abd7-a0c0a459c7b7: # Link Destination
+    columnSuffix: null
     contentColumnType: string
     fieldGroup: null
     handle: linkDestination

@@ -4,7 +4,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: 13642bff-bb9c-4352-aaa6-ca00b85829d2
+            fieldUid: 13642bff-bb9c-4352-aaa6-ca00b85829d2 # Navigation
             instructions: null
             label: null
             required: false

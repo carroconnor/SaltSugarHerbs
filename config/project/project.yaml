@@ -1,4 +1,4 @@
-dateModified: 1648525736
+dateModified: 1652616509
 email:
   fromEmail: carr.oconnor@gmail.com
   fromName: 'Louisville Condo'
@@ -13,10 +13,12 @@ meta:
     3fc7f2fd-503d-4c22-b99d-343c611d96c5: Image # Image
     4a93e8a5-0a43-4d07-bdc3-0f20f4a84f08: Text # Text
     4bb733b4-211f-47a9-bc42-258bf24d0f89: 'Condo Title ' # Condo Title 
+    6cf4b9f8-c3a6-456d-a42c-ff3ee1607539: 'Nav Link' # Nav Link
     7b32ef01-59fc-4679-b9ac-7163dc7dd434: 'Image Description' # Image Description
     18a16d10-3678-451e-b983-cf69831295a7: Feature # Feature
     30df8ec6-9014-4d28-8f15-ba9a922dce29: 'Landing Image' # Landing Image
     37e11fd5-c2c0-4653-b271-e6e8d808bf5d: 'Featured Information' # Featured Information
+    48ba5964-ac9b-478d-961d-d7f162d4f83f: 'Link Text' # Link Text
     71bbb603-ab4b-4ae7-9fb5-0d76c40f5ec1: 'Condo Short Description' # Condo Short Description
     80be797a-d96f-4f42-81ba-38d56638f4c2: test # test
     80d4b117-2dff-4449-8700-1b82cf0fcaf8: 'Enupal Slider' # Enupal Slider
@@ -26,14 +28,17 @@ meta:
     0633e114-8fcc-4023-aa72-84446cfffb98: 'Open Link In' # Open Link In
     958d76f2-cfad-45a7-963e-1743105ad752: 'Enupal Slider' # Enupal Slider
     983d981c-8052-49a0-bd18-9d0cd36b1677: 'Public Schema' # Public Schema
+    13642bff-bb9c-4352-aaa6-ca00b85829d2: Navigation # Navigation
     562415a8-f8bd-4514-a7ca-cb7cc2892cdb: Link # Link
     846716b3-6db9-4ed0-9929-e813732a5c80: Title # Title
+    20031374-ff5a-4edc-8455-b313b1ff8886: 'Link Url' # Link Url
     85671307-1a72-4b4c-b41a-2d52423c2466: 'Landing Video' # Landing Video
     a0334a8c-7d48-4775-9cfe-090432af78af: Html # Html
     a700da26-049b-43a9-bb7f-b0c9764325eb: Content # Content
     b0a41033-b440-4cb5-999e-76d87de0ae30: Image # Image
     b6d3c6dd-f63a-48d2-9075-bb787c2e7cd0: 'Image Under Header' # Image Under Header
     b33bede8-4956-4ed2-96f5-203bc208448d: Text # Text
+    b500bcf7-668f-4a09-abd7-a0c0a459c7b7: 'Link Destination' # Link Destination
     ba1b9198-280f-4494-b9c9-7783d9ae4068: 'Interest Icon' # Interest Icon
     bc7b7788-4348-4a7e-9a1d-015a3d266633: 'Louisville Condo' # Louisville Condo
     bd950649-4585-4d1c-875f-4f12f21bfb0d: 'Interest Name' # Interest Name
@@ -73,7 +78,7 @@ system:
   live: true
   name: 'Louisville Condo'
   retryDuration: null
-  schemaVersion: 3.7.7
+  schemaVersion: 3.7.33
   timeZone: America/Los_Angeles
 users:
   allowPublicRegistration: false
