@@ -9,6 +9,7 @@ body {
   }
 
   .actionButton {
+    cursor: pointer;
     float: right;
     padding: 1em;
   }
